@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FileCheck, 
-  ShieldCheck, 
-  Globe, 
-  Award, 
-  CheckCircle2, 
-  Search, 
+import {
+  FileCheck,
+  ShieldCheck,
+  Globe,
+  Award,
+  CheckCircle2,
+  Search,
   Lock,
   ArrowRight
 } from 'lucide-react';
+
 
 const CertificationsPage = () => {
   const certifications = [
@@ -68,9 +69,9 @@ const CertificationsPage = () => {
       <div className="relative overflow-hidden bg-[#1E3A8A] text-white">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img 
-            src="/cert_hero_bg.png" 
-            alt="Security Seals and Growth" 
+          <img
+            src="/cert_hero_bg.png"
+            alt="Security Seals and Growth"
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A8A]/50 to-[#1E3A8A]/70"></div>
@@ -136,13 +137,13 @@ const CertificationsPage = () => {
       {/* Quality Protocol Section */}
       <section className="py-24 bg-gray-50 relative overflow-hidden">
         <div className="container mx-auto px-6 text-center mb-16">
-           <h2 className="text-4xl font-bold text-gray-900 mb-4">The Agri Merge Protocol</h2>
-           <p className="text-gray-600 max-w-2xl mx-auto">Beyond certifications, we follow a strict internal quality check for every single consignment.</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">The Agri Merge Protocol</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">Beyond certifications, we follow a strict internal quality check for every single consignment.</p>
         </div>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {qualitySteps.map((step, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -168,8 +169,8 @@ const CertificationsPage = () => {
             <Globe className="w-16 h-16 text-blue-600 mx-auto mb-8" />
             <h2 className="text-4xl font-bold mb-6 text-gray-900">Compliant & Secure</h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-              International trade requires meticulous documentation and adherence to global law. 
-              At <span className="text-blue-600 font-bold">Agri Merge Internationals</span>, we handle all compliance, 
+              International trade requires meticulous documentation and adherence to global law.
+              At <span className="text-blue-600 font-bold">Agri Merge Internationals</span>, we handle all compliance,
               from phytosanitary certificates to customs documentation, ensuring a smooth path for your cargo.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
