@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Products = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const categories = ['All', 'Agri Commodities', 'Seeds & Grains', 'Lentils'];
+
   const products = [
     {
       id: 1,
@@ -25,18 +29,30 @@ const Products = () => {
       category: 'Lentils',
       image: 'https://images.unsplash.com/photo-1515942400420-2b98fed1f515?q=80&w=2070&auto=format&fit=crop',
       desc: 'A wide range of high-grade pulses and lentils, cleaned and sorted for export.'
-    },
-    {
-      id: 4,
-      name: 'Red Chilli',
-      category: 'Spices',
-      image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop',
-      desc: 'Consistent quality dry red chillies with perfect heat levels for global requirements.'
     }
   ];
 
+  const filteredProducts = activeCategory === 'All' 
+    ? products 
+    : products.filter(p => p.category === activeCategory);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
-    <section id="products" className="py-24 bg-white">
+    <section id="products" className="py-24 bg-white dark:bg-slate-900 transition-colors">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="text-left">
@@ -50,7 +66,7 @@ const Products = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl font-bold text-gray-900"
+              className="text-4xl font-bold text-gray-900 dark:text-white"
             >
               Premium Agri Commodities
             </motion.h2>
@@ -64,14 +80,34 @@ const Products = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
+        {/* Category Filters */}
+        <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-2 rounded-full font-medium transition-all ${
+                activeCategory === category
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          {filteredProducts.map((product) => (
             <motion.div 
               key={product.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: product.id * 0.1 }}
-              viewport={{ once: true }}
+              variants={itemVariants}
               className="group cursor-pointer"
             >
               <Link to={`/product/${product.id}`}>
@@ -86,12 +122,12 @@ const Products = () => {
                   </div>
                 </div>
                 <p className="text-blue-600 text-xs font-bold uppercase mb-1 tracking-wider">{product.category}</p>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{product.name}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{product.desc}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors">{product.name}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{product.desc}</p>
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -59,6 +59,32 @@ const ProductDetails = () => {
         { label: 'Color Value', value: '60 - 150 ASTA' },
         { label: 'Packing', value: '10kg / 25kg Jute Bags' }
       ]
+    },
+    "5": {
+      name: 'Black Pepper',
+      category: 'Spices',
+      image: 'https://images.unsplash.com/photo-1532336411638-cd743604f67c?q=80&w=2070&auto=format&fit=crop',
+      desc: 'High-quality black pepper corns with rich aroma and intense flavor, sourced from the best plantations.',
+      features: ['Rich aroma', 'High piperine content', 'Well-dried', 'Zero adulteration'],
+      specs: [
+        { label: 'Origin', value: 'Kerala / Karnataka, India' },
+        { label: 'Density', value: '500 - 600 g/l' },
+        { label: 'Moisture', value: '12% Max' },
+        { label: 'Packing', value: '25kg / 50kg PP Bags' }
+      ]
+    },
+    "6": {
+      name: 'Chickpeas',
+      category: 'Lentils',
+      image: 'https://images.unsplash.com/photo-1585996853874-9f798f48003a?q=80&w=2070&auto=format&fit=crop',
+      desc: 'Premium quality chickpeas, sourced from the best farms, ideal for global markets.',
+      features: ['Large size', 'High protein', 'Fast cooking', 'Uniform color'],
+      specs: [
+        { label: 'Origin', value: 'Madhya Pradesh, India' },
+        { label: 'Size', value: '7mm, 8mm, 9mm' },
+        { label: 'Moisture', value: '12% Max' },
+        { label: 'Packing', value: '25kg / 50kg PP Bags' }
+      ]
     }
   };
 

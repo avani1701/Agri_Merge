@@ -4,10 +4,10 @@ import { ShieldCheck, Truck, Headphones, Award } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: <ShieldCheck className="w-8 h-8 text-blue-600" />, title: 'Trusted Suppliers', desc: 'Sourced directly from certified farmers and ethical suppliers.' },
-    { icon: <Truck className="w-8 h-8 text-blue-600" />, title: 'Global Shipping', desc: 'Secure and timely delivery to any corner of the globe.' },
-    { icon: <Headphones className="w-8 h-8 text-blue-600" />, title: 'Dedicated Support', desc: '24/7 client coordination and real-time status updates.' },
-    { icon: <Award className="w-8 h-8 text-blue-600" />, title: 'Quality Focus', desc: 'Rigorous inspection standards for every single shipment.' },
+    { icon: '/shield_icon.png', title: 'Trusted Suppliers', desc: 'Sourced directly from certified farmers and ethical suppliers.' },
+    { icon: '/packaging_icon.png', title: 'Global Shipping', desc: 'Secure and timely delivery to any corner of the globe.' },
+    { icon: '/headphone_icon.png', title: 'Dedicated Support', desc: '24/7 client coordination and real-time status updates.' },
+    { icon: '/award_icon.png', title: 'Quality Focus', desc: 'Rigorous inspection standards for every single shipment.' },
   ];
 
   return (
@@ -50,8 +50,10 @@ const About = () => {
             className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             {stats.map((stat, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                <div className="mb-4">{stat.icon}</div>
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
+                <div className="w-16 h-16 mb-4">
+                  <img src={stat.icon} alt={stat.title} className="w-full h-full object-contain mix-blend-multiply" />
+                </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-900">{stat.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{stat.desc}</p>
               </div>

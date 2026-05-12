@@ -14,36 +14,32 @@ import {
 const CertificationsPage = () => {
   const certifications = [
     {
-      id: "iso",
-      title: "ISO 22000",
-      provider: "International Standards",
-      desc: "Adhering to global food safety management systems across our entire supply chain.",
-      icon: <FileCheck className="w-10 h-10" />,
-      color: "bg-blue-600"
-    },
-    {
-      id: "apeda",
-      title: "APEDA Member",
-      provider: "Agri Export Authority",
-      desc: "Certified member of the Agricultural and Processed Food Products Export Development Authority.",
-      icon: <Globe className="w-10 h-10" />,
-      color: "bg-green-600"
-    },
-    {
-      id: "fssai",
-      title: "FSSAI License",
+      id: "gst",
+      title: "GST Certification",
       provider: "Government of India",
-      desc: "Ensuring food safety and hygiene standards across all our facilities and operations.",
-      icon: <Award className="w-10 h-10" />,
-      color: "bg-orange-600"
+      desc: "Goods and Services Tax registration for compliant domestic and international trade.",
+      icon: '/document_icon.png'
     },
     {
-      id: "spices",
-      title: "Spices Board",
+      id: "iec",
+      title: "Import Export Code (IEC)",
+      provider: "DGFT",
+      desc: "Official Import Export Code issued by the Directorate General of Foreign Trade.",
+      icon: '/globe_icon.png'
+    },
+    {
+      id: "coffee",
+      title: "Coffee Board Certification",
+      provider: "Coffee Board of India",
+      desc: "Certified registration for the export of premium Indian coffee.",
+      icon: '/award_icon.png'
+    },
+    {
+      id: "spice",
+      title: "Spice Board Certification",
       provider: "Spices Board India",
-      desc: "Official registration for the export of premium Indian spices to international markets.",
-      icon: <CheckCircle2 className="w-10 h-10" />,
-      color: "bg-purple-600"
+      desc: "Official registration for the export of premium Indian spices.",
+      icon: '/checkmark_icon.png'
     }
   ];
 
@@ -68,42 +64,46 @@ const CertificationsPage = () => {
   return (
     <div className="pt-20 bg-white">
       {/* Hero Header */}
-      <section className="relative py-24 bg-blue-900 overflow-hidden text-white">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 -right-20 w-96 h-96 bg-blue-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 -left-20 w-80 h-80 bg-blue-600 rounded-full blur-3xl opacity-30"></div>
+      {/* Premium Hero Banner */}
+      <div className="relative overflow-hidden bg-[#1E3A8A] text-white">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src="/cert_hero_bg.png" 
+            alt="Security Seals and Growth" 
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A8A]/50 to-[#1E3A8A]/70"></div>
         </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.nav 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex items-center space-x-2 text-blue-300 text-sm mb-6"
-          >
-            <span>Home</span>
-            <ArrowRight className="w-4 h-4" />
-            <span className="text-white font-semibold">Certifications</span>
-          </motion.nav>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl md:text-6xl font-bold mb-6 max-w-3xl"
-          >
-            Validated by <span className="text-blue-400">Trust & Authority</span>
-          </motion.h1>
-          <motion.p 
+
+        {/* Abstract Background Patterns */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[#2563EB] rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563EB] rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+          {/* Subtle grid texture */}
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+        </div>
+
+        <div className="relative container mx-auto px-6 py-28 flex flex-col items-center text-center">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-blue-100 max-w-2xl leading-relaxed"
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
           >
-            Our promise to quality isn't just a claim—it's validated by national and international 
-            regulatory bodies to ensure your peace of mind.
-          </motion.p>
+            <span className="text-[#2563EB] font-bold uppercase tracking-widest text-sm mb-4 block">Trust & Compliance</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+              Certifications
+            </h1>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+              Our promise to quality isn't just a claim—it's validated by national and international regulatory bodies.
+            </p>
+          </motion.div>
         </div>
-      </section>
+
+        {/* Glassmorphism accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#2563EB] to-transparent opacity-50"></div>
+      </div>
 
       {/* Certification Grid */}
       <section className="py-24">
@@ -119,8 +119,8 @@ const CertificationsPage = () => {
                 whileHover={{ y: -10 }}
                 className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group"
               >
-                <div className={`${cert.color} w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform`}>
-                  {cert.icon}
+                <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform">
+                  <img src={cert.icon} alt={cert.title} className="w-full h-full object-contain mix-blend-multiply" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-900">{cert.title}</h3>
                 <p className="text-blue-600 text-xs font-bold uppercase tracking-wider mb-4">{cert.provider}</p>

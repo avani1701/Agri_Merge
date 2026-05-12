@@ -28,6 +28,22 @@ const Hero = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
     <section className="relative h-screen flex items-center overflow-hidden bg-slate-950">
       {/* 3D Background */}
@@ -67,21 +83,33 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-20 text-white">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
           className="max-w-3xl"
         >
-          <span className="inline-block px-4 py-1 rounded-full bg-blue-600/30 border border-blue-400/50 text-blue-300 text-sm font-semibold mb-6">
+          <motion.span 
+            variants={itemVariants}
+            className="inline-block px-4 py-1 rounded-full bg-blue-600/30 border border-blue-400/50 text-blue-300 text-sm font-semibold mb-6"
+          >
             Garlic • Soyabean • Pulses • Spices
-          </span>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          </motion.span>
+          <motion.h1 
+            variants={itemVariants}
+            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+          >
             From Indian Origins to <span className="text-blue-400">Global Markets</span>
-          </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl">
+          </motion.h1>
+          <motion.p 
+            variants={itemVariants}
+            className="text-xl text-gray-200 mb-8 max-w-2xl"
+          >
             At Agri Merge Internationals, we deliver premium Indian products worldwide with reliability, transparency, and trust. Connecting direct produce with international demand.
-          </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          </motion.p>
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center transition-all group">
               Explore Products
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -89,7 +117,7 @@ const Hero = () => {
             <button className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-bold transition-all">
               Learn More
             </button>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 

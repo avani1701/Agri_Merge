@@ -4,8 +4,26 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-blue-900 text-white overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="relative py-24 bg-[#1E3A8A] text-white overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="/contact_hero_bg.png" 
+          alt="Global Communication Network" 
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A8A]/70 to-[#1E3A8A]/90"></div>
+      </div>
+
+      {/* Abstract Background Patterns */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#2563EB] rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563EB] rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        {/* Subtle grid texture */}
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+      </div>
+
+      <div className="relative container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
