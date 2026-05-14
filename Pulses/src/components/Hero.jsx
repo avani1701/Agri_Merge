@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Scene3D from './Scene3D';
 import heroVideo1 from '../assets/video/f_a_ed_e_c_f_f_e_mp_.mp4';
 import heroVideo2 from '../assets/video/pXvD_Wmp_.mp4';
@@ -80,13 +81,19 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
           >
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center transition-all group">
+            <Link 
+              to="/products"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center transition-all group"
+            >
               Explore Products
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-bold transition-all">
+            </Link>
+            <Link 
+              to="/about"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-center transition-all"
+            >
               Learn More
-            </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
