@@ -1,5 +1,6 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Youtube, ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -21,16 +22,16 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3">
               <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <Instagram className="w-4 h-4" />
+                <FaInstagram className="w-4 h-4" />
               </a>
               <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <Youtube className="w-4 h-4" />
+                <FaYoutube className="w-4 h-4" />
               </a>
               <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <Facebook className="w-4 h-4" />
+                <FaFacebook className="w-4 h-4" />
               </a>
               <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <Linkedin className="w-4 h-4" />
+                <FaLinkedin className="w-4 h-4" />
               </a>
             </div>
           </div>
