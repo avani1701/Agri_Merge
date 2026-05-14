@@ -1,32 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade } from 'swiper/modules';
 import Scene3D from './Scene3D';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-fade';
+import heroVideo1 from '../assets/video/f_a_ed_e_c_f_f_e_mp_.mp4';
+import heroVideo2 from '../assets/video/pXvD_Wmp_.mp4';
+import heroVideo3 from '../assets/video/f_d_c_e_b_cb_mp_.mp4';
 
 const Hero = () => {
-  const slides = [
-    {
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2074&auto=format&fit=crop",
-      title: "Garlic",
-      tagline: "High-Quality Bulbs Sourced Locally"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1599599810694-b5b37304c041?q=80&w=2070&auto=format&fit=crop",
-      title: "Soyabean",
-      tagline: "Nutrient-Rich Non-GMO Seeds"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1515942400420-2b98fed1f515?q=80&w=2070&auto=format&fit=crop",
-      title: "Pulses",
-      tagline: "Premium Lentils for Global Markets"
-    }
-  ];
+  const videos = [heroVideo1, heroVideo2, heroVideo3];
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+  const handleVideoEnded = () => {
+    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,37 +31,21 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center overflow-hidden bg-slate-950">
+    <section className="relative h-screen flex items-start pt-32 md:items-center md:pt-0 overflow-hidden bg-slate-950">
       {/* 3D Background */}
       <Scene3D />
 
-      {/* Swiper Slider */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <Swiper
-          modules={[Autoplay, EffectFade]}
-          effect="fade"
-          autoplay={{
-            delay: 7000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          className="h-full w-full"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative h-full w-full">
-                <img 
-                  src={slide.image} 
-                  alt={slide.title} 
-                  className="w-full h-full object-cover opacity-40"
-                />
-                <div className="absolute bottom-20 left-6 z-30 md:hidden">
-                   <p className="text-blue-400 font-bold tracking-widest text-sm uppercase">{slide.tagline}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <video
+          key={currentVideoIndex}
+          src={videos[currentVideoIndex]}
+          autoPlay
+          muted
+          playsInline
+          onEnded={handleVideoEnded}
+          className="w-full h-full object-cover opacity-40 transition-opacity duration-1000"
+        />
       </div>
 
       {/* Background Overlay */}
@@ -96,7 +66,7 @@ const Hero = () => {
           </motion.span>
           <motion.h1 
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-4xl md:text-7xl font-bold mb-6 leading-tight"
           >
             From Indian Origins to <span className="text-blue-400">Global Markets</span>
           </motion.h1>

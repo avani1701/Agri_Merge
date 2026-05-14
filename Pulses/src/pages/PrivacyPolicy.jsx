@@ -1,38 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import PageHero from '../components/PageHero';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="pt-20">
-      {/* Premium Hero Banner */}
-      <div className="relative overflow-hidden bg-[#1E3A8A] text-white">
-        <div className="absolute inset-0">
-          <img 
-            src="/legal_hero_bg.png" 
-            alt="Legal Background" 
-            className="w-full h-full object-cover opacity-60"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A8A]/50 to-[#1E3A8A]/70"></div>
-        </div>
-
-        <div className="relative container mx-auto px-6 py-24 flex flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
-          >
-            <span className="text-[#2563EB] font-bold uppercase tracking-widest text-sm mb-4 block">Legal</span>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-              Privacy Policy
-            </h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-              How we collect, use, and protect your data.
-            </p>
-          </motion.div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#2563EB] to-transparent opacity-50"></div>
-      </div>
+    <div className="pt-20 bg-white dark:bg-slate-900 transition-colors">
+      <PageHero 
+        title="Privacy Policy"
+        tagline="Legal"
+        desc="How we collect, use, and protect your data."
+        bgImage="/legal_hero_bg.png"
+      />
 
       {/* Content Section */}
       <section className="py-20 bg-white dark:bg-slate-900 transition-colors">

@@ -38,14 +38,14 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const headerOpacity = isScrolled || location.pathname !== '/' ? 'bg-white shadow-md py-4' : 'bg-transparent py-6';
+  const headerOpacity = isScrolled || location.pathname !== '/' ? 'bg-white shadow-md py-2 md:py-4' : 'bg-transparent py-3 md:py-6';
   const textColor = isScrolled || location.pathname !== '/' ? 'text-blue-900' : 'text-white';
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${headerOpacity}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className={`text-2xl font-bold tracking-tight ${textColor}`}>
+          <span className={`text-lg md:text-2xl font-bold tracking-tight ${textColor}`}>
             AGRI MERGE <span className="font-extrabold text-blue-500">INTERNATIONALS</span>
           </span>
         </Link>

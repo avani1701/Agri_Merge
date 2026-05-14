@@ -3,7 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const WhatsAppWidget = () => {
-  const phoneNumber = "919652165616"; // Using the number found in Contact.jsx
+  const phoneNumber = "917000568721"; // Using the number provided by user
   const message = "Hello! I am interested in your agricultural products.";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
