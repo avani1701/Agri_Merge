@@ -13,21 +13,21 @@ const Products = () => {
       id: 1,
       name: 'Fresh Garlic',
       category: 'Agri Commodities',
-      image: 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?q=80&w=2070&auto=format&fit=crop',
+      image: '/garlic.jpg',
       desc: 'Premium quality fresh garlic bulbs with high pungency and long shelf life.'
     },
     {
       id: 2,
       name: 'Organic Soyabean',
       category: 'Seeds & Grains',
-      image: 'https://images.unsplash.com/photo-1599599810694-b5b37304c041?q=80&w=2070&auto=format&fit=crop',
+      image: '/soyabean.png',
       desc: 'Non-GMO soyabean seeds rich in protein, sourced from sustainable farms.'
     },
     {
       id: 3,
       name: 'Premium Pulses',
       category: 'Lentils',
-      image: 'https://images.unsplash.com/photo-1515942400420-2b98fed1f515?q=80&w=2070&auto=format&fit=crop',
+      image: '/pulses.png',
       desc: 'A wide range of high-grade pulses and lentils, cleaned and sorted for export.'
     }
   ];

@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Truck, Headphones, Award } from 'lucide-react';
 
 const About = () => {
   const stats = [
     { icon: '/shield_icon.png', title: 'Trusted Suppliers', desc: 'Sourced directly from certified farmers and ethical suppliers.' },
     { icon: '/packaging_icon.png', title: 'Global Shipping', desc: 'Secure and timely delivery to any corner of the globe.' },
-    { icon: '/headphone_icon.png', title: 'Dedicated Support', desc: '24/7 client coordination and real-time status updates.' },
-    { icon: '/award_icon.png', title: 'Quality Focus', desc: 'Rigorous inspection standards for every single shipment.' },
+    { icon: '/coordination_3d.png', title: 'Dedicated Support', desc: '24/7 client coordination and real-time status updates.' },
+    { icon: '/quality_3d.png', title: 'Quality Focus', desc: 'Rigorous inspection standards for every single shipment.' },
   ];
 
   return (
@@ -24,10 +23,10 @@ const About = () => {
             <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">About Agri Merge</span>
             <h2 className="text-4xl font-bold mb-6 text-gray-900 leading-tight">Exporting Excellence From India to the World</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              At Agri Merge Internationals, we may be a young startup, but our team brings years of experience in international trade and sourcing. We specialize in connecting buyers with authentic Indian products — from agricultural goods to industrial materials — ensuring the best quality at competitive prices.
+              At Agri Merge Internationals, we are dedicated to connecting global buyers with authentic, premium-grade Indian products. We specialize in sourcing the finest agricultural goods and industrial materials, ensuring rigorous quality control and highly competitive pricing at every stage.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              What sets us apart is our strong supplier network, transparent processes, and commitment to delivering value. Whether it’s bulk exports or specialized shipments, we make sure our clients benefit from India’s diverse production capabilities.
+              What sets us apart is our extensive certified supplier network, transparent operations, and commitment to long-term partnerships. Whether dealing in bulk exports or customized shipments, we ensure our global clients benefit from India’s rich and diverse agricultural production capabilities.
             </p>
             
             <div className="grid grid-cols-2 gap-6 pt-4">
@@ -50,9 +49,9 @@ const About = () => {
             className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             {stats.map((stat, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
-                <div className="w-16 h-16 mb-4">
-                  <img src={stat.icon} alt={stat.title} className="w-full h-full object-contain mix-blend-multiply" />
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 duration-300 border border-gray-100 flex flex-col items-start group">
+                <div className="w-16 h-16 mb-5">
+                  <img src={stat.icon} alt={stat.title} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-900">{stat.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{stat.desc}</p>

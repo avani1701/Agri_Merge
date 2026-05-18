@@ -1,0 +1,14 @@
+1. Front page video laeg
+2. Remove team description --- done
+3. Remove customer satisfaction percentage --- done
+4. Quality assurance will be 100% --- done
+5. Add word like further more or as per preference on required areas. i.e. in packing section --- done
+6. Replace supply ability word with Minimum Order Quantity (MOQ) --- done
+7. Write only Inquire for more details instead of inquire for bulk orders --- done
+8. Select Origin for products accordingly --- done
+9. Need to change Soyabean specifications in product section 
+10. Need to change product photos --- done
+11. Need to improve key highlights in product section 
+12. Product name should in global and domestic version as well in product specification area. --- done
+13. Need to discuss over sections like Privacy policy and Terms of services --- done
+14. Have to fix screen change modeer.

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Scene3D from './Scene3D';
 import heroVideo1 from '../assets/video/f_a_ed_e_c_f_f_e_mp_.mp4';
@@ -100,15 +100,13 @@ const Hero = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-10 right-10 z-20 hidden md:block">
-        <div className="flex space-x-4">
-          <div className="text-right">
-            <p className="text-4xl font-bold text-white">98.6%</p>
-            <p className="text-gray-400 text-sm">Customer Satisfaction</p>
+        <div className="flex items-center space-x-3 bg-slate-900/60 backdrop-blur-md border border-white/10 px-5 py-3 rounded-2xl shadow-xl">
+          <div className="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-400/30 flex items-center justify-center text-blue-400">
+            <ShieldCheck className="w-6 h-6" strokeWidth={2} />
           </div>
-          <div className="h-10 w-[1px] bg-white/30 mt-2"></div>
-          <div className="text-right">
-            <p className="text-4xl font-bold text-white">95%</p>
-            <p className="text-gray-400 text-sm">Quality Assurance</p>
+          <div className="text-left">
+            <p className="text-2xl font-bold text-white leading-none mb-1">100%</p>
+            <p className="text-gray-400 text-[10px] uppercase tracking-widest font-semibold">Quality Assurance</p>
           </div>
         </div>
       </div>

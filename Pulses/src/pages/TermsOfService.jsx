@@ -17,30 +17,30 @@ const TermsOfService = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms & Incoterms</h2>
               <p>
-                By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing this platform or initiating inquiries, you agree to be bound by these Terms of Service, complying fully with international export-import guidelines, Indian trade regulations, and standard Incoterms (Incoterms 2020) including FOB, CIF, and CFR structures.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Use License</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Quality Specifications & Natural Variations</h2>
               <p>
-                Permission is granted to temporarily download one copy of the materials (information or software) on Agri Merge Internationals' website for personal, non-commercial transitory viewing only.
+                Agri Merge Internationals guarantees that all agricultural commodities (including garlic, organic soyabean, pulses, and premium spices) conform strictly to quality parameters, purity limits, and moisture thresholds designated in the finalized Proforma Invoice. Natural agricultural products are subject to minor physical variations within globally accepted tolerances.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Disclaimer</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Trade Documentation & Shipments</h2>
               <p>
-                The materials on Agri Merge Internationals' website are provided on an 'as is' basis. Agri Merge Internationals makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                Shipment timelines are established in contractual agreements. We commit to obtaining and delivering vital trade documents including the Bill of Lading, Phytosanitary Certificate, Fumigation Certificate, Certificate of Origin, and accredited third-party lab inspection certificates.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Limitations</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Payment Terms, Contracts & Force Majeure</h2>
               <p>
-                In no event shall Agri Merge Internationals or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Agri Merge Internationals' website.
+                All wholesale trades are executed based on agreed financial terms (e.g., irrevocable Letters of Credit, Advance Telegraphic Transfer, or CAD). Neither party shall be held liable for delays or failures resulting from Force Majeure events, including natural crop disasters, trade embargoes, harbor closures, or sudden shipping container shortages.
               </p>
             </div>
           </div>

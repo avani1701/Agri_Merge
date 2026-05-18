@@ -17,37 +17,37 @@ const PrivacyPolicy = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Information We Collect</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Sourcing & Business Information We Collect</h2>
               <p>
-                We collect information you provide directly to us when you fill out forms on our website, inquire about products, or communicate with us. This may include your name, email address, phone number, company name, and details about your inquiry.
+                At Agri Merge Internationals, we collect corporate and trade-related information required to facilitate international agricultural trade. This includes buyer specifications, import licenses, tax registration certificates, port of discharge details, and direct contact information (name, corporate email, phone number, and company credentials) submitted through our inquiry portal.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. How We Use Your Information</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Processing, Logistics & Custom Clearance</h2>
               <p>
-                We use the information we collect to respond to your inquiries, provide the services you request, process transactions, and send you related information including confirmations and invoices.
+                The information we collect is strictly utilized to process proforma invoices, secure space with global shipping liners, obtain custom clearances, and issue legal export documentation—including Certificates of Origin, Phytosanitary Certificates from the Ministry of Agriculture, and Fumigation/Inspection reports.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Data Security</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Data Security & International Trade Compliance</h2>
               <p>
-                We take reasonable measures to help protect information about you from loss, theft, misuse, and unauthorized access, disclosure, alteration, and destruction.
+                We execute high-grade security measures to safeguard proprietary agricultural specifications, packing preferences (e.g., custom mesh or PP bags), and sensitive financial documents (such as Letters of Credit or Telegraphic Transfer records) from unauthorized access, disclosure, or altering.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Cookies</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. Third-Party Disclosures for Freight & Quality</h2>
               <p>
-                Our website may use cookies to enhance user experience. You can choose to set your web browser to refuse cookies, or to alert you when cookies are being sent.
+                To complete global shipments, we securely share necessary shipment parameters with accredited third-party logistics companies, custom clearing agents, and international quality inspection houses (such as SGS or Geo-Chem) according to global trade requirements.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Contact Us</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Contact Our Legal & Compliance Desk</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us at info@agrimerge.in.
+                For questions regarding this policy, phytosanitary compliance, or global trade data protection, please reach out directly to our compliance desk at info@agrimerge.in.
               </p>
             </div>
           </div>
