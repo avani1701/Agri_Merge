@@ -28,10 +28,10 @@ const AboutPage = () => {
               <h2 className="text-3xl font-bold mb-6 dark:text-white">Delivering India’s Finest</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                 Agri Merge Internationals connects global markets with India’s most celebrated origins — where trust, quality, and consistency come first.
-                From the misty hills of Coorg to the fertile fields of Guntur, we bring forward products that are not just traded worldwide, but respected for their provenance and performance.
+                From the rich, fertile soils of Madhya Pradesh to the dynamic spice centers of Guntur, we export premium products respected for their exceptional provenance.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Coorg Coffee is known for its balanced and refined character. Our carefully sourced beans offer a smooth, medium-to-full body with mild acidity and a clean finish. The cup opens with gentle floral aromas, followed by layered notes of cocoa, chocolate, hazelnut, almond, warm spices, and caramel.
+                Our Premium Indian Garlic is globally celebrated for its robust pungency, dense cloves, and long-lasting shelf life. Carefully sourced from optimal agricultural zones, each bulb undergoes strict cleaning, curing, and grading to ensure immaculate quality and consistent sizing, making it the preferred choice for commercial kitchens and processors worldwide.
               </p>
             </motion.div>
             <motion.div
@@ -39,27 +39,27 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="rounded-3xl overflow-hidden shadow-2xl"
+              className="rounded-3xl overflow-hidden shadow-2xl bg-gray-100 h-[380px] w-full"
             >
               <img
-                src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=2070&auto=format&fit=crop"
-                alt="Coffee Beans"
+                src="/garlic_packaging.png"
+                alt="Premium Indian Garlic Packaging"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </motion.div>
           </div>
-
+ 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="rounded-3xl overflow-hidden shadow-2xl md:order-1 order-2"
+              className="rounded-3xl overflow-hidden shadow-2xl md:order-1 order-2 h-[380px] w-full bg-gray-100"
             >
               <img
-                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop"
-                alt="Red Chillies"
+                src="/soyabean_packaging.png"
+                alt="Organic Soyabean Packaging"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </motion.div>
@@ -70,12 +70,12 @@ const AboutPage = () => {
               viewport={{ once: true }}
               className="md:order-2 order-1"
             >
-              <h2 className="text-3xl font-bold mb-6 dark:text-white">Guntur Chillies</h2>
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Organic Soyabean</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                On the spice front, Guntur Chillies, especially the iconic Guntur Sannam S4, represent India’s dominance in global chilli exports. Renowned for their intense pungency and deep red colour, these chillies deliver a sharp heat in the range of 35,000–40,000 SHU.
+                India stands as a trusted global exporter of premium non-GMO, organic Soyabeans. Grown in the highly fertile black cotton soils of Central India, our Soyabeans are cultivated using purely natural, chemical-free methods to preserve their rich protein density and clean profile.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                At Agri Merge Internationals, we supply premium dry whole chillies, finely milled chilli powder, and uniform chilli flakes, all processed under strict quality controls to meet international standards.
+                At Agri Merge Internationals, we ensure our organic Soyabeans are thoroughly cleaned, double-graded, and sorted to reach supreme purity and perfect moisture content. We cater directly to global culinary producers, food manufacturing units, and oil processors demanding the highest quality standards.
               </p>
             </motion.div>
           </div>

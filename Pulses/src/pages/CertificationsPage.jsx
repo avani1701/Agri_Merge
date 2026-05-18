@@ -29,10 +29,10 @@ const CertificationsPage = () => {
       icon: '/globe_icon.png'
     },
     {
-      id: "coffee",
-      title: "Coffee Board Certification",
-      provider: "Coffee Board of India",
-      desc: "Certified registration for the export of premium Indian coffee.",
+      id: "apeda",
+      title: "APEDA Certification",
+      provider: "Ministry of Commerce, Govt. of India",
+      desc: "Registration with the Agricultural and Processed Food Products Export Development Authority for premium Indian agricultural exports.",
       icon: '/award_icon.png'
     },
     {
@@ -136,14 +136,14 @@ const CertificationsPage = () => {
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 leading-relaxed">
               International trade requires meticulous documentation and adherence to global law.
               At <span className="text-blue-600 dark:text-blue-400 font-bold">Agri Merge Internationals</span>, we handle all compliance,
-              from phytosanitary certificates to customs documentation, ensuring a smooth path for your cargo.
+              from APEDA and phytosanitary certificates to customs documentation, ensuring a smooth path for your cargo. Download our official corporate brochure to explore our complete export catalog and grading standards.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-900/30">
-                View Audit Reports
+                View Brochure
               </button>
               <button className="bg-white dark:bg-slate-800 border-2 border-gray-100 dark:border-slate-700 text-gray-700 dark:text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-slate-700 transition-all">
-                Download PDF Portfolio
+                Download Brochure
               </button>
             </div>
           </div>

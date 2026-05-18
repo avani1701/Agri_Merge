@@ -36,7 +36,7 @@ const ProductsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: 'Sourcing', desc: 'Directly from the best farms across India.', icon: '/sourcing_icon.png' },
-              { title: 'Processing', desc: 'Maintained in certified facilities with strict hygiene.', icon: '/processing_icon.png' },
+              { title: 'Processing', desc: 'Maintained in certified facilities with strict hygiene.', icon: '/processing_3d.png' },
               { title: 'Packaging', desc: 'Customized packaging to ensure freshness during transit.', icon: '/packaging_icon.png' }
             ].map((item, i) => (
               <motion.div 
@@ -49,7 +49,11 @@ const ProductsPage = () => {
                 className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 transition-all hover:shadow-xl flex flex-col items-center text-center"
               >
                 <div className="w-24 h-24 mb-6">
-                  <img src={item.icon} alt={item.title} className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal dark:invert" />
+                  <img 
+                    src={item.icon} 
+                    alt={item.title} 
+                    className={`w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal ${item.icon.includes('3d') ? '' : 'dark:invert'}`} 
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-4 dark:text-white">{item.title}</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm">{item.desc}</p>
