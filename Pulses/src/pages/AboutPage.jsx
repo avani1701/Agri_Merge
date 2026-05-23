@@ -42,7 +42,7 @@ const AboutPage = () => {
               className="rounded-3xl overflow-hidden shadow-2xl bg-gray-100 h-[380px] w-full"
             >
               <img
-                src="/Soya.png"
+                src="/soyabean_v2.png"
                 alt="Premium Indian Garlic Packaging"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

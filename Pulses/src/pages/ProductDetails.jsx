@@ -26,7 +26,7 @@ const ProductDetails = () => {
     "2": {
       name: 'Soyabean',
       category: 'Seeds & Grains',
-      image: '/soyabean_v2.png',
+      image: '/Soya.png',
       desc: 'Top-grade non-GMO soyabean seeds harvested with care. Ideal for human consumption and oil extraction.',
       features: ['100% Non-GMO certified harvest', 'Exceptionally high protein content (38-40%)', 'Optimized minimal moisture for longer storage', 'Sortex-cleaned for uniform seed size and color'],
       specs: [
