@@ -42,7 +42,7 @@ const AboutPage = () => {
               className="rounded-3xl overflow-hidden shadow-2xl bg-gray-100 h-[380px] w-full"
             >
               <img
-                src="/garlic_packaging.png"
+                src="/soyabean_v2.png"
                 alt="Premium Indian Garlic Packaging"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -58,7 +58,7 @@ const AboutPage = () => {
               className="rounded-3xl overflow-hidden shadow-2xl md:order-1 order-2 h-[380px] w-full bg-gray-100"
             >
               <img
-                src="/soyabean_packaging.png"
+                src="/pulses_v2.png"
                 alt="Soyabean Packaging"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

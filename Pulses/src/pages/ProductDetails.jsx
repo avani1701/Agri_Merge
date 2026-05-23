@@ -20,7 +20,7 @@ const ProductDetails = () => {
         { label: 'Origin', value: 'Madhya Pradesh / Gujarat, India' },
         { label: 'Size', value: '40mm, 45mm, 50mm, 55mm+' },
         { label: 'Packing', value: '5kg, 10kg, 20kg or as per preference' },
-        { label: 'Minimum Order Quantity (MOQ)', value: '500 MT per Month' }
+        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
       ]
     },
     "2": {
@@ -36,7 +36,8 @@ const ProductDetails = () => {
         { label: 'Protein', value: '38% - 40% Min' },
         { label: 'Oil Content', value: '18% - 19% Min' },
         { label: 'Moisture', value: '10% Max' },
-        { label: 'Packing', value: 'Bulk or as per preference' }
+        { label: 'Packing', value: 'Bulk or as per preference' },
+        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
       ]
     },
     "3": {
@@ -55,6 +56,7 @@ const ProductDetails = () => {
         { label: 'Origin', value: 'Madhya Pradesh, India' },
         { label: 'Cleaning', value: 'Machine Cleaned / Sortex' },
         { label: 'Packing', value: '25kg / 50kg or as per preference' },
+        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' },
         { label: 'Shelf Life', value: '24 Months' }
       ]
     },
@@ -70,7 +72,8 @@ const ProductDetails = () => {
         { label: 'Origin', value: 'Madhya Pradesh / Andhra Pradesh, India' },
         { label: 'SHU (Heat)', value: '15,000 - 90,000 (Based on variety)' },
         { label: 'Color Value', value: '60 - 150 ASTA' },
-        { label: 'Packing', value: '10kg / 25kg or as per preference' }
+        { label: 'Packing', value: '10kg / 25kg or as per preference' },
+        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
       ]
     },
     "5": {
@@ -85,7 +88,8 @@ const ProductDetails = () => {
         { label: 'Origin', value: 'Madhya Pradesh / Kerala / Karnataka, India' },
         { label: 'Density', value: '500 - 600 g/l' },
         { label: 'Moisture', value: '12% Max' },
-        { label: 'Packing', value: '25kg / 50kg or as per preference' }
+        { label: 'Packing', value: '25kg / 50kg or as per preference' },
+        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
       ]
     },
     "6": {
@@ -100,7 +104,8 @@ const ProductDetails = () => {
         { label: 'Origin', value: 'Madhya Pradesh, India' },
         { label: 'Size', value: '7mm, 8mm, 9mm' },
         { label: 'Moisture', value: '12% Max' },
-        { label: 'Packing', value: '25kg / 50kg or as per preference' }
+        { label: 'Packing', value: '25kg / 50kg or as per preference' },
+        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
       ]
     }
   };
