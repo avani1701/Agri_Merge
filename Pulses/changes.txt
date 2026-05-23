@@ -24,6 +24,6 @@
 7. Write export excellence to the world instead of export excellence from India to the world in about section 
 8. For trusted supplier section write only source directly from  farmers and specified suppliers 
 9. In global shipping session right Ensuring secure and timely deliveries worldwide
-10. In destination country option it should be a scroll down option for selecting the country 
+10. In destination country option it should be a scroll down option for selecting the country --- done
 11. Which would work in getting touch option specification in enquiry option in email section right only email don't write @ example.com  it should be profession.
 12. Videos not playing in sequel manner there is a 1-2 second of a lap in between  all videos

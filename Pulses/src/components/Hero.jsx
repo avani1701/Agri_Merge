@@ -59,6 +59,7 @@ const Hero = () => {
             src={video}
             muted
             playsInline
+            preload="auto"
             onEnded={handleVideoEnded}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentVideoIndex ? 'opacity-40' : 'opacity-0'
