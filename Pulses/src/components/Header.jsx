@@ -58,7 +58,7 @@ const Header = () => {
               key={link.name}
               to={link.href}
               className={`font-medium transition-colors ${
-                isScrolled || location.pathname !== '/' ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+                isScrolled || location.pathname !== '/' ? 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white hover:text-blue-200'
               }`}
             >
               {link.name}
@@ -73,20 +73,20 @@ const Header = () => {
           <button
             onClick={toggleTheme}
             className={`p-2 rounded-full transition-colors ${
-              isScrolled || location.pathname !== '/' ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              isScrolled || location.pathname !== '/' ? 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800' : 'text-white hover:bg-white/10'
             }`}
             aria-label="Toggle theme"
           >
-            {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+            {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5 text-yellow-400" />}
           </button>
         </nav>
 
         {/* Mobile Menu Toggle */}
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? (
-            <X className={isScrolled || location.pathname !== '/' ? 'text-gray-900' : 'text-white'} />
+            <X className={isScrolled || location.pathname !== '/' ? 'text-gray-900 dark:text-white' : 'text-white'} />
           ) : (
-            <Menu className={isScrolled || location.pathname !== '/' ? 'text-gray-900' : 'text-white'} />
+            <Menu className={isScrolled || location.pathname !== '/' ? 'text-gray-900 dark:text-white' : 'text-white'} />
           )}
         </button>
       </div>
@@ -98,14 +98,14 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white absolute top-full left-0 w-full shadow-lg overflow-hidden"
+            className="md:hidden bg-white dark:bg-slate-900 border-t dark:border-slate-800 absolute top-full left-0 w-full shadow-lg overflow-hidden"
           >
             <div className="flex flex-col items-center space-y-4 py-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-gray-700 font-medium py-2 hover:text-blue-600 transition-colors"
+                  className="text-gray-700 dark:text-gray-200 font-medium py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
@@ -123,7 +123,7 @@ const Header = () => {
                   toggleTheme();
                   setIsMenuOpen(false);
                 }}
-                className="flex items-center space-x-2 text-gray-700 font-medium py-2 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-2 text-gray-700 dark:text-gray-200 font-medium py-2 hover:text-blue-600 transition-colors"
               >
                 {theme === 'light' ? (
                   <>
@@ -132,7 +132,7 @@ const Header = () => {
                   </>
                 ) : (
                   <>
-                    <Sun className="w-5 h-5" />
+                    <Sun className="w-5 h-5 text-yellow-500" />
                     <span>Light Mode</span>
                   </>
                 )}
