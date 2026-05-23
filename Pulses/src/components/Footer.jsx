@@ -14,8 +14,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Col 1: Brand */}
           <div>
-            <Link to="/" className="text-2xl font-bold text-blue-900 dark:text-white mb-4 block">
-              AGRI MERGE <span className="text-blue-500">INTERNATIONALS</span>
+            <Link to="/" className="flex items-center gap-2 mb-4">
+              <img src="/logo_main.png" alt="Agri Merge" className="h-16 w-auto object-contain" />
+              <div className="text-xl font-bold text-blue-900 dark:text-white">
+                AGRI MERGE <span className="text-blue-500">INTERNATIONALS</span>
+              </div>
             </Link>
             <p className="text-gray-500 dark:text-gray-400 max-w-sm text-sm mb-6">
               Connecting Indian Produce with Global Demand through trust and excellence. Sourcing the finest agricultural products for the world.

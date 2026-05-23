@@ -44,7 +44,8 @@ const Header = () => {
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${headerOpacity}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center gap-2">
+          <img src="/logo_main.png" alt="Agri Merge" className="h-14 md:h-20 w-auto object-contain" />
           <span className={`text-lg md:text-2xl font-bold tracking-tight ${textColor}`}>
             AGRI MERGE <span className="font-extrabold text-blue-500">INTERNATIONALS</span>
           </span>

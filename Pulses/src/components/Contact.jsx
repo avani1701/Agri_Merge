@@ -87,6 +87,10 @@ const Contact = () => {
             className="lg:w-1/2"
           >
             <form className="relative overflow-hidden p-10 rounded-3xl shadow-2xl space-y-6 border border-slate-700/50 transition-colors bg-slate-900/90 text-white backdrop-blur-xl">
+              <div className="flex justify-center mb-2 relative z-10">
+                <img src="/logo_main.png" alt="Agri Merge" className="h-24 w-auto object-contain" />
+              </div>
+
               {/* Background Image inside the Form Card */}
               <div className="absolute inset-0 z-0 pointer-events-none opacity-25">
                 <img 

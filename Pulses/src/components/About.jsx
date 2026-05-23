@@ -20,6 +20,7 @@ const About = () => {
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
+            <img src="/logo_main.png" alt="Agri Merge" className="h-32 md:h-40 w-auto mb-4 object-contain" />
             <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">About Agri Merge</span>
             <h2 className="text-4xl font-bold mb-6 text-gray-900 leading-tight">Export Excellence to the World</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">

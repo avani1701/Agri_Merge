@@ -20,7 +20,7 @@ const Products = () => {
       id: 2,
       name: 'Soyabean',
       category: 'Seeds & Grains',
-      image: '/soyabean.png',
+      image: '/soyabean_v2.png',
       desc: 'Non-GMO soyabean seeds rich in protein, sourced from sustainable farms.'
     },
     {

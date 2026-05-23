@@ -15,6 +15,13 @@ import PageHero from '../components/PageHero';
 const CertificationsPage = () => {
   const certifications = [
     {
+      id: "iec",
+      title: "Import Export Code (IEC)",
+      provider: "DGFT",
+      desc: "Official Import Export Code issued by the Directorate General of Foreign Trade.",
+      icon: '/globe_icon.png'
+    },
+    {
       id: "gst",
       title: "GST Certification",
       provider: "Government of India",
@@ -22,11 +29,11 @@ const CertificationsPage = () => {
       icon: '/document_icon.png'
     },
     {
-      id: "iec",
-      title: "Import Export Code (IEC)",
-      provider: "DGFT",
-      desc: "Official Import Export Code issued by the Directorate General of Foreign Trade.",
-      icon: '/globe_icon.png'
+      id: "fssai",
+      title: "FSSAI Certification",
+      provider: "Food Safety & Standards Authority of India",
+      desc: "Central licensing ensuring complete compliance with food safety and nutritional standards for global markets.",
+      icon: '/shield_icon.png'
     },
     {
       id: "apeda",
@@ -37,10 +44,17 @@ const CertificationsPage = () => {
     },
     {
       id: "spice",
-      title: "Spice Board Certification",
+      title: "SPICES BOARD Certification",
       provider: "Spices Board India",
       desc: "Official registration for the export of premium Indian spices.",
       icon: '/checkmark_icon.png'
+    },
+    {
+      id: "coi",
+      title: "Certificate Of Origin COI",
+      provider: "Chamber of Commerce / Ministry of Agriculture",
+      desc: "Legal export documentation validating the Indian origin and quality standards of our shipments.",
+      icon: '/document_icon.png'
     }
   ];
 
@@ -74,7 +88,7 @@ const CertificationsPage = () => {
       {/* Certification Grid */}
       <section className="py-24 bg-white dark:bg-slate-900 transition-colors">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {certifications.map((cert, idx) => (
               <motion.div
                 key={cert.id}
