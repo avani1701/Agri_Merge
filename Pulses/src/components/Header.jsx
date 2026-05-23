@@ -38,8 +38,8 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const headerOpacity = isScrolled || location.pathname !== '/' ? 'bg-white shadow-md py-2 md:py-4' : 'bg-transparent py-3 md:py-6';
-  const textColor = isScrolled || location.pathname !== '/' ? 'text-blue-900' : 'text-white';
+  const headerOpacity = isScrolled || location.pathname !== '/' ? 'bg-white dark:bg-slate-900 shadow-md py-2 md:py-4' : 'bg-transparent py-3 md:py-6';
+  const textColor = isScrolled || location.pathname !== '/' ? 'text-blue-900 dark:text-white' : 'text-white';
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${headerOpacity}`}>

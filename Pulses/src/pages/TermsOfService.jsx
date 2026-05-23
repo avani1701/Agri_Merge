@@ -26,7 +26,7 @@ const TermsOfService = () => {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Quality Specifications & Natural Variations</h2>
               <p>
-                Agri Merge Internationals guarantees that all agricultural commodities (including garlic, organic soyabean, pulses, and premium spices) conform strictly to quality parameters, purity limits, and moisture thresholds designated in the finalized Proforma Invoice. Natural agricultural products are subject to minor physical variations within globally accepted tolerances.
+                Agri Merge Internationals guarantees that all agricultural commodities (including garlic, soyabean, pulses, and premium spices) conform strictly to quality parameters, purity limits, and moisture thresholds designated in the finalized Proforma Invoice. Natural agricultural products are subject to minor physical variations within globally accepted tolerances.
               </p>
             </div>
 

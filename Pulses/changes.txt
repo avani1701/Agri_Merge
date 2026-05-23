@@ -12,3 +12,18 @@
 12. Product name should in global and domestic version as well in product specification area. --- done
 13. Need to discuss over sections like Privacy policy and Terms of services --- done
 14. Have to fix screen change modeer.
+
+
+
+1.  Soyabean photo should be in polish and fresh version
+2.  Remove choose a product in product of interest section 
+3.  Write only Soyabean instead of organic soyabean --- done
+4.  There's glitch in opening product of interest section i.e. complete white flash in that particular section 
+5. Don't mention specific packing preference i.e. mesh bags. --- done
+6. Use capital letter for words reliability, transparency, trust on first page on top intro ---done
+7. Write export excellence to the world instead of export excellence from India to the world in about section 
+8. For trusted supplier section write only source directly from  farmers and specified suppliers 
+9. In global shipping session right Ensuring secure and timely deliveries worldwide
+10. In destination country option it should be a scroll down option for selecting the country 
+11. Which would work in getting touch option specification in enquiry option in email section right only email don't write @ example.com  it should be profession.
+12. Videos not playing in sequel manner there is a 1-2 second of a lap in between  all videos

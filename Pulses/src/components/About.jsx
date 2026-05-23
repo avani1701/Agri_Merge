@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   const stats = [
-    { icon: '/shield_icon.png', title: 'Trusted Suppliers', desc: 'Sourced directly from certified farmers and ethical suppliers.' },
-    { icon: '/packaging_icon.png', title: 'Global Shipping', desc: 'Secure and timely delivery to any corner of the globe.' },
+    { icon: '/shield_icon.png', title: 'Trusted Suppliers', desc: 'Source directly from farmers and specified suppliers' },
+    { icon: '/packaging_icon.png', title: 'Global Shipping', desc: 'Ensuring secure and timely deliveries worldwide' },
     { icon: '/coordination_3d.png', title: 'Dedicated Support', desc: '24/7 client coordination and real-time status updates.' },
     { icon: '/quality_3d.png', title: 'Quality Focus', desc: 'Rigorous inspection standards for every single shipment.' },
   ];
@@ -21,7 +21,7 @@ const About = () => {
             className="lg:w-1/2"
           >
             <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">About Agri Merge</span>
-            <h2 className="text-4xl font-bold mb-6 text-gray-900 leading-tight">Exporting Excellence From India to the World</h2>
+            <h2 className="text-4xl font-bold mb-6 text-gray-900 leading-tight">Export Excellence to the World</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
               At Agri Merge Internationals, we are dedicated to connecting global buyers with authentic, premium-grade Indian products. We specialize in sourcing the finest agricultural goods and industrial materials, ensuring rigorous quality control and highly competitive pricing at every stage.
             </p>

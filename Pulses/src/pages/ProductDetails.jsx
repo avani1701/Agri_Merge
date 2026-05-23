@@ -16,27 +16,27 @@ const ProductDetails = () => {
       features: ['Extended shelf life for prolonged freshness', 'Premium large bulb size with tight cloves', 'Rich in natural Allicin for maximum medicinal value', 'Hygienic, taint-free export-grade packing'],
       specs: [
         { label: 'Global Name', value: 'Fresh Garlic' },
-        { label: 'Domestic Name', value: 'Lahsun (लहसुन)' },
+        { label: 'Domestic Name', value: 'Lahsun' },
         { label: 'Origin', value: 'Madhya Pradesh / Gujarat, India' },
         { label: 'Size', value: '40mm, 45mm, 50mm, 55mm+' },
-        { label: 'Packing', value: '5kg, 10kg, 20kg Mesh Bags or as per preference' },
+        { label: 'Packing', value: '5kg, 10kg, 20kg or as per preference' },
         { label: 'Minimum Order Quantity (MOQ)', value: '500 MT per Month' }
       ]
     },
     "2": {
-      name: 'Organic Soyabean',
+      name: 'Soyabean',
       category: 'Seeds & Grains',
       image: '/soyabean.png',
       desc: 'Top-grade non-GMO soyabean seeds harvested with care. Ideal for human consumption and oil extraction.',
-      features: ['100% Non-GMO certified organic harvest', 'Exceptionally high protein content (38-40%)', 'Optimized minimal moisture for longer storage', 'Sortex-cleaned for uniform seed size and color'],
+      features: ['100% Non-GMO certified harvest', 'Exceptionally high protein content (38-40%)', 'Optimized minimal moisture for longer storage', 'Sortex-cleaned for uniform seed size and color'],
       specs: [
-        { label: 'Global Name', value: 'Organic Soyabean' },
-        { label: 'Domestic Name', value: 'Soyabean (सोयाबीन)' },
+        { label: 'Global Name', value: 'Soyabean' },
+        { label: 'Domestic Name', value: 'Soyabean' },
         { label: 'Origin', value: 'Madhya Pradesh / Maharashtra, India' },
         { label: 'Protein', value: '38% - 40% Min' },
         { label: 'Oil Content', value: '18% - 19% Min' },
         { label: 'Moisture', value: '10% Max' },
-        { label: 'Packing', value: 'Bulk in Containers or as per preference' }
+        { label: 'Packing', value: 'Bulk or as per preference' }
       ]
     },
     "3": {
@@ -47,14 +47,14 @@ const ProductDetails = () => {
       features: ['Ultra-clean processing with foreign matter < 1%', 'Guaranteed zero admixture and impurities', 'Nutrient-dense and rich in dietary fiber', 'Secure bulk packing to prevent moisture ingress'],
       specs: [
         { label: 'Global Name', value: 'Premium Pulses' },
-        { label: 'Domestic Name', value: 'Dal (दाल)' },
-        { label: 'Toor (Global / Domestic)', value: 'Pigeon Peas / Toor Dal (तूर दाल)' },
-        { label: 'Moong (Global / Domestic)', value: 'Mung Bean / Moong Dal (मूंग दाल)' },
-        { label: 'Chana (Global / Domestic)', value: 'Bengal Gram / Chana Dal (चना दाल)' },
-        { label: 'Urad (Global / Domestic)', value: 'Black Gram / Urad Dal (उड़द दाल)' },
+        { label: 'Domestic Name', value: 'Dal' },
+        { label: 'Toor (Global / Domestic)', value: 'Pigeon Peas / Toor Dal' },
+        { label: 'Moong (Global / Domestic)', value: 'Mung Bean / Moong Dal' },
+        { label: 'Chana (Global / Domestic)', value: 'Bengal Gram / Chana Dal' },
+        { label: 'Urad (Global / Domestic)', value: 'Black Gram / Urad Dal' },
         { label: 'Origin', value: 'Madhya Pradesh, India' },
         { label: 'Cleaning', value: 'Machine Cleaned / Sortex' },
-        { label: 'Packing', value: '25kg / 50kg PP Bags or as per preference' },
+        { label: 'Packing', value: '25kg / 50kg or as per preference' },
         { label: 'Shelf Life', value: '24 Months' }
       ]
     },
@@ -66,11 +66,11 @@ const ProductDetails = () => {
       features: ['Naturally sun-dried to preserve essential oils', '100% free from artificial colors and preservatives', 'Available in stemmed and meticulously stem-less grades', 'Premium pungency and rich ASTA color value'],
       specs: [
         { label: 'Global Name', value: 'Red Chilli' },
-        { label: 'Domestic Name', value: 'Lal Mirch (लाल मिर्च)' },
+        { label: 'Domestic Name', value: 'Lal Mirch' },
         { label: 'Origin', value: 'Madhya Pradesh / Andhra Pradesh, India' },
         { label: 'SHU (Heat)', value: '15,000 - 90,000 (Based on variety)' },
         { label: 'Color Value', value: '60 - 150 ASTA' },
-        { label: 'Packing', value: '10kg / 25kg Jute Bags or as per preference' }
+        { label: 'Packing', value: '10kg / 25kg or as per preference' }
       ]
     },
     "5": {
@@ -81,11 +81,11 @@ const ProductDetails = () => {
       features: ['Intensely rich aroma and bold earthy flavor', 'High piperine content for maximum potency', 'Carefully sun-dried to ensure optimal moisture levels', 'Strictly tested for zero adulteration'],
       specs: [
         { label: 'Global Name', value: 'Black Pepper' },
-        { label: 'Domestic Name', value: 'Kali Mirch (काली मिर्च)' },
+        { label: 'Domestic Name', value: 'Kali Mirch' },
         { label: 'Origin', value: 'Madhya Pradesh / Kerala / Karnataka, India' },
         { label: 'Density', value: '500 - 600 g/l' },
         { label: 'Moisture', value: '12% Max' },
-        { label: 'Packing', value: '25kg / 50kg PP Bags or as per preference' }
+        { label: 'Packing', value: '25kg / 50kg or as per preference' }
       ]
     },
     "6": {
@@ -96,11 +96,11 @@ const ProductDetails = () => {
       features: ['Premium large-caliber seeds (up to 9mm)', 'Excellent plant-based protein source', 'Optimal texture ensuring fast and even cooking', 'Sortex-polished for uniform light color and visual appeal'],
       specs: [
         { label: 'Global Name', value: 'Chickpeas' },
-        { label: 'Domestic Name', value: 'Kabuli Chana (काबुली चना)' },
+        { label: 'Domestic Name', value: 'Kabuli Chana' },
         { label: 'Origin', value: 'Madhya Pradesh, India' },
         { label: 'Size', value: '7mm, 8mm, 9mm' },
         { label: 'Moisture', value: '12% Max' },
-        { label: 'Packing', value: '25kg / 50kg PP Bags or as per preference' }
+        { label: 'Packing', value: '25kg / 50kg or as per preference' }
       ]
     }
   };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,20 @@ import heroVideo3 from '../assets/video/f_d_c_e_b_cb_mp_.mp4';
 const Hero = () => {
   const videos = [heroVideo1, heroVideo2, heroVideo3];
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videoRefs = [useRef(null), useRef(null), useRef(null)];
+
+  useEffect(() => {
+    videoRefs.forEach((ref, index) => {
+      if (ref.current) {
+        if (index === currentVideoIndex) {
+          ref.current.currentTime = 0;
+          ref.current.play().catch(err => console.warn("Autoplay blocked", err));
+        } else {
+          ref.current.pause();
+        }
+      }
+    });
+  }, [currentVideoIndex]);
 
   const handleVideoEnded = () => {
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
@@ -38,15 +52,19 @@ const Hero = () => {
 
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          key={currentVideoIndex}
-          src={videos[currentVideoIndex]}
-          autoPlay
-          muted
-          playsInline
-          onEnded={handleVideoEnded}
-          className="w-full h-full object-cover opacity-40 transition-opacity duration-1000"
-        />
+        {videos.map((video, index) => (
+          <video
+            key={index}
+            ref={videoRefs[index]}
+            src={video}
+            muted
+            playsInline
+            onEnded={handleVideoEnded}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentVideoIndex ? 'opacity-40' : 'opacity-0'
+            }`}
+          />
+        ))}
       </div>
 
       {/* Background Overlay */}
@@ -75,7 +93,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-xl text-gray-200 mb-8 max-w-2xl"
           >
-            At Agri Merge Internationals, we deliver premium Indian products worldwide with reliability, transparency, and trust. Connecting direct produce with international demand.
+            At Agri Merge Internationals, we deliver premium Indian products worldwide with Reliability, Transparency, and Trust. Connecting direct produce with international demand.
           </motion.p>
           <motion.div 
             variants={itemVariants}

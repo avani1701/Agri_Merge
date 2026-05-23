@@ -59,7 +59,7 @@ const AboutPage = () => {
             >
               <img
                 src="/soyabean_packaging.png"
-                alt="Organic Soyabean Packaging"
+                alt="Soyabean Packaging"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </motion.div>
@@ -70,12 +70,12 @@ const AboutPage = () => {
               viewport={{ once: true }}
               className="md:order-2 order-1"
             >
-              <h2 className="text-3xl font-bold mb-6 dark:text-white">Organic Soyabean</h2>
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Soyabean</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                India stands as a trusted global exporter of premium non-GMO, organic Soyabeans. Grown in the highly fertile black cotton soils of Central India, our Soyabeans are cultivated using purely natural, chemical-free methods to preserve their rich protein density and clean profile.
+                India stands as a trusted global exporter of premium non-GMO Soyabeans. Grown in the highly fertile black cotton soils of Central India, our Soyabeans are cultivated using purely natural, chemical-free methods to preserve their rich protein density and clean profile.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                At Agri Merge Internationals, we ensure our organic Soyabeans are thoroughly cleaned, double-graded, and sorted to reach supreme purity and perfect moisture content. We cater directly to global culinary producers, food manufacturing units, and oil processors demanding the highest quality standards.
+                At Agri Merge Internationals, we ensure our Soyabeans are thoroughly cleaned, double-graded, and sorted to reach supreme purity and perfect moisture content. We cater directly to global culinary producers, food manufacturing units, and oil processors demanding the highest quality standards.
               </p>
             </motion.div>
           </div>

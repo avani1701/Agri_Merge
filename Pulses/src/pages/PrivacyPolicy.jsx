@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Data Security & International Trade Compliance</h2>
               <p>
-                We execute high-grade security measures to safeguard proprietary agricultural specifications, packing preferences (e.g., custom mesh or PP bags), and sensitive financial documents (such as Letters of Credit or Telegraphic Transfer records) from unauthorized access, disclosure, or altering.
+                We execute high-grade security measures to safeguard proprietary agricultural specifications, packing preferences, and sensitive financial documents (such as Letters of Credit or Telegraphic Transfer records) from unauthorized access, disclosure, or altering.
               </p>
             </div>
 
