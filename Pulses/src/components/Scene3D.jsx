@@ -15,7 +15,7 @@ const FloatingGlobe = () => {
 
   return (
     <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <Sphere ref={mesh} args={[1, 100, 200]} scale={3.5}>
+      <Sphere ref={mesh} args={[1, 64, 64]} scale={3.5}>
         <MeshDistortMaterial
           color="#3b82f6"
           attach="material"

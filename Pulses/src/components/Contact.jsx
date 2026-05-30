@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
   const [selectedProduct, setSelectedProduct] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const productParam = params.get('product');
+    if (productParam) {
+      setSelectedProduct(productParam);
+    }
+  }, [location]);
 
   return (
     <section id="contact" className="relative py-24 bg-slate-900 text-white overflow-hidden">
@@ -35,7 +45,7 @@ const Contact = () => {
             className="lg:w-1/2"
           >
             <span className="text-blue-400 font-bold uppercase tracking-widest text-sm mb-4 block">Get In Touch</span>
-            <h2 className="text-4xl font-bold mb-8 leading-tight">Ready to Expand Your Business Internationally?</h2>
+            <h2 className="text-4xl font-bold mb-8 leading-tight">Scaling Your Global Business with Reliability, Transparency, and Trust</h2>  
             
             <div className="space-y-8 mt-12">
               <motion.div 
@@ -86,13 +96,17 @@ const Contact = () => {
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
-            <form className="relative overflow-hidden p-10 rounded-3xl shadow-2xl space-y-6 border border-slate-700/50 transition-colors bg-slate-900/90 text-white backdrop-blur-xl">
-              <div className="flex justify-center mb-2 relative z-10">
-                <img src="/logo_main.png" alt="Agri Merge" className="h-24 w-auto object-contain" />
+            <form className="relative overflow-hidden p-10 rounded-3xl shadow-2xl space-y-6 border border-slate-700/50 bg-slate-900 text-white">
+              <div className="text-center mb-6 relative z-10">
+                <div className="flex justify-center mb-4">
+                  <img src="/logo_main.png" alt="Agri Merge" className="h-20 w-auto object-contain" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Inquiry Form</h3>
+                <p className="text-slate-400 text-sm mt-2">Connecting Indian Harvests to Global Demand</p>
               </div>
 
               {/* Background Image inside the Form Card */}
-              <div className="absolute inset-0 z-0 pointer-events-none opacity-25">
+              <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
                 <img 
                   src="/world_map_network.png" 
                   alt="Background Map" 
@@ -114,16 +128,17 @@ const Contact = () => {
                   <label className="block text-slate-300 text-sm font-bold mb-2">Email</label>
                   <input 
                     type="email" 
-                    className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="Email"
                   />
                 </div>
                 <div>
                   <label className="block text-slate-300 text-sm font-bold mb-2">Destination Country</label>
                   <select 
-                    className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer"
+                    defaultValue=""
+                    className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-light transition-all cursor-pointer"
                   >
-                    <option value="" disabled selected className="bg-slate-800 text-white">Select Country</option>
+                    <option value="" disabled className="bg-slate-800 text-white">Select Country</option>
                     <option value="Afghanistan" className="bg-slate-800 text-white">Afghanistan</option>
                     <option value="Albania" className="bg-slate-800 text-white">Albania</option>
                     <option value="Algeria" className="bg-slate-800 text-white">Algeria</option>
@@ -325,10 +340,10 @@ const Contact = () => {
                   <select 
                     value={selectedProduct}
                     onChange={(e) => setSelectedProduct(e.target.value)}
-                    className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer"
                   >
                     <option value="" disabled className="bg-slate-800 text-white">Select Product</option>
-                    <option value="Garlic" className="bg-slate-800 text-white">Fresh Garlic</option>
+                    <option value="Fresh Garlic" className="bg-slate-800 text-white">Fresh Garlic</option>
                     <option value="Soyabean" className="bg-slate-800 text-white">Soyabean</option>
                     <option value="Pulses" className="bg-slate-800 text-white">Premium Pulses</option>
                     <option value="Other" className="bg-slate-800 text-white">Other Commodities</option>

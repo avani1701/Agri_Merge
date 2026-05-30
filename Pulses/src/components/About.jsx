@@ -10,9 +10,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gray-50">
+    <section id="about" className="py-24 bg-gray-50 border-b border-gray-100">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -23,7 +23,7 @@ const About = () => {
             <img src="/logo_main.png" alt="Agri Merge" className="h-32 md:h-40 w-auto mb-4 object-contain" />
             <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">About Agri Merge</span>
             <h2 className="text-4xl font-bold mb-6 text-gray-900 leading-tight">Export Excellence to the World</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-6 leading-relaxed text-lg">
               At Agri Merge Internationals, we are dedicated to connecting global buyers with authentic, premium-grade Indian products. We specialize in sourcing the finest agricultural goods and industrial materials, ensuring rigorous quality control and highly competitive pricing at every stage.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -37,7 +37,7 @@ const About = () => {
               </div>
               <div className="border-l-4 border-blue-600 pl-4">
                 <p className="text-3xl font-bold text-gray-900">15+</p>
-                <p className="text-gray-500">Target Countries</p>
+                <p className="text-gray-500">Countries Operating With</p>
               </div>
             </div>
           </motion.div>
@@ -58,6 +58,41 @@ const About = () => {
                 <p className="text-gray-500 text-sm leading-relaxed">{stat.desc}</p>
               </div>
             ))}
+          </motion.div>
+        </div>
+
+        {/* New Pulses Product Showcase Section */}
+        <div className="flex flex-col lg:flex-row gap-16 items-center pt-16 border-t border-gray-200">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="lg:w-1/2 order-2 lg:order-1"
+          >
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3] group">
+              <img 
+                src="/pulses_about.jpeg" 
+                alt="Premium Indian Pulses" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="lg:w-1/2 order-1 lg:order-2"
+          >
+            <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+              India stands as a trusted global exporter of premium nutrition-rich Pulses. Grown in the highly fertile regions of Central & North India, our Pulses are cultivated using purely natural, chemical-free methods to preserve their high protein density and clean nutrient profile.
+            </p>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              At Agri Merge Internationals, we ensure our Pulses (Moong - Green Gram, Toor - Pigeon Peas, Urad - Black Gram, Chana - Chickpeas) are thoroughly cleaned, double-graded, and sortex-sorted to reach supreme purity and perfect moisture content. We cater directly to global food manufacturers, retail packers, and wholesale distributors demanding the highest quality standards.
+            </p>
           </motion.div>
         </div>
       </div>

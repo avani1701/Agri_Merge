@@ -10,20 +10,58 @@ import heroVideo3 from '../assets/video/f_d_c_e_b_cb_mp_.mp4';
 const Hero = () => {
   const videos = [heroVideo1, heroVideo2, heroVideo3];
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const videoRefs = [useRef(null), useRef(null), useRef(null)];
+  const videoRefs = useRef([]);
+
+  // Initialize refs array
+  if (videoRefs.current.length !== videos.length) {
+    videoRefs.current = videos.map(() => null);
+  }
 
   useEffect(() => {
-    videoRefs.forEach((ref, index) => {
-      if (ref.current) {
-        if (index === currentVideoIndex) {
-          ref.current.currentTime = 0;
-          ref.current.play().catch(err => console.warn("Autoplay blocked", err));
-        } else {
-          ref.current.pause();
+    // Current video to play
+    const currentVideo = videoRefs.current[currentVideoIndex];
+    if (currentVideo) {
+      // Don't reset to 0 if we're already playing another one? 
+      // No, we want it to start from top.
+      currentVideo.currentTime = 0;
+      currentVideo.play().catch(err => console.warn("Autoplay blocked", err));
+    }
+
+    // Preload next video
+    const nextIndex = (currentVideoIndex + 1) % videos.length;
+    const nextVideo = videoRefs.current[nextIndex];
+    if (nextVideo) {
+      nextVideo.load(); // Force browser to start loading next video
+    }
+
+    // Pause other videos after fade transition
+    const fadeTimeout = setTimeout(() => {
+      videoRefs.current.forEach((ref, index) => {
+        if (ref && index !== currentVideoIndex) {
+          ref.pause();
+        }
+      });
+    }, 1200); 
+
+    return () => clearTimeout(fadeTimeout);
+  }, [currentVideoIndex]);
+
+  const handleTimeUpdate = (index) => {
+    if (index === currentVideoIndex) {
+      const video = videoRefs.current[index];
+      // When it's very close to end, start the next video to avoid the lap
+      if (video && video.duration > 0 && video.currentTime > video.duration - 0.2) {
+        const nextIndex = (currentVideoIndex + 1) % videos.length;
+        const nextVideo = videoRefs.current[nextIndex];
+        if (nextVideo && nextVideo.paused) {
+          nextVideo.currentTime = 0;
+          nextVideo.play().catch(e => {});
+          // We can't trigger state change here easily without loop, 
+          // let onEnded do the final visibility switch
         }
       }
-    });
-  }, [currentVideoIndex]);
+    }
+  };
 
   const handleVideoEnded = () => {
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
@@ -46,7 +84,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-start pt-32 md:items-center md:pt-0 overflow-hidden bg-slate-950">
+    <section className="relative h-screen flex items-start pt-48 md:items-center md:pt-0 overflow-hidden bg-slate-950">
       {/* 3D Background */}
       <Scene3D />
 
@@ -55,12 +93,13 @@ const Hero = () => {
         {videos.map((video, index) => (
           <video
             key={index}
-            ref={videoRefs[index]}
+            ref={(el) => (videoRefs.current[index] = el)}
             src={video}
             muted
             playsInline
             preload="auto"
             onEnded={handleVideoEnded}
+            onTimeUpdate={() => handleTimeUpdate(index)}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentVideoIndex ? 'opacity-40' : 'opacity-0'
             }`}
@@ -92,9 +131,9 @@ const Hero = () => {
           </motion.h1>
           <motion.p 
             variants={itemVariants}
-            className="text-xl text-gray-200 mb-8 max-w-2xl"
+            className="text-xl text-gray-200 mb-12 max-w-2xl"
           >
-            At Agri Merge Internationals, we deliver premium Indian products worldwide with Reliability, Transparency, and Trust. Connecting direct produce with international demand.
+            At Agri Merge Internationals, we deliver premium Indian products worldwide with Reliability, Transparency, and Trust.
           </motion.p>
           <motion.div 
             variants={itemVariants}
@@ -114,12 +153,38 @@ const Hero = () => {
               Learn More
             </Link>
           </motion.div>
+
+          {/* New Mobile Stats/Trust Row */}
+          <motion.div 
+            variants={itemVariants}
+            className="mt-12 md:hidden flex items-center justify-between px-2 pt-10 border-t border-white/10"
+          >
+            <div className="text-center">
+              <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">15+</p>
+              <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Countries</p>
+            </div>
+            <div className="w-px h-8 bg-white/10"></div>
+            <div className="text-center">
+              <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">ISO</p>
+              <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Certified</p>
+            </div>
+            <div className="w-px h-8 bg-white/10"></div>
+            <div className="text-center">
+              <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">24/7</p>
+              <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Support</p>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 
       {/* Decorative Elements */}
       <div className="absolute bottom-10 right-10 z-20 hidden md:block">
-        <div className="flex items-center space-x-3 bg-slate-900/60 backdrop-blur-md border border-white/10 px-5 py-3 rounded-2xl shadow-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="flex items-center space-x-3 bg-slate-900/60 backdrop-blur-md border border-white/10 px-5 py-3 rounded-2xl shadow-xl hover:bg-slate-900/80 transition-all cursor-default"
+        >
           <div className="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-400/30 flex items-center justify-center text-blue-400">
             <ShieldCheck className="w-6 h-6" strokeWidth={2} />
           </div>
@@ -127,7 +192,7 @@ const Hero = () => {
             <p className="text-2xl font-bold text-white leading-none mb-1">100%</p>
             <p className="text-gray-400 text-[10px] uppercase tracking-widest font-semibold">Quality Assurance</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -45,10 +45,10 @@ const ContactPage = () => {
               </p>
               
               {/* Visual Stats Row */}
-              <div className="grid grid-cols-3 gap-6 border-t border-slate-800/80 pt-10 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-slate-800/80 pt-10 max-w-4xl mx-auto">
                 <div>
                   <h4 className="text-3xl md:text-5xl font-extrabold text-blue-400">15+</h4>
-                  <p className="text-xs text-slate-400 mt-2 uppercase font-bold tracking-wider">Countries Served</p>
+                  <p className="text-xs text-slate-400 mt-2 uppercase font-bold tracking-wider">Countries Operating With</p>
                 </div>
                 <div>
                   <h4 className="text-3xl md:text-5xl font-extrabold text-blue-400">24/7</h4>

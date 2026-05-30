@@ -49,7 +49,7 @@ const AboutPage = () => {
             </motion.div>
           </div>
  
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}

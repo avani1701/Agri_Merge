@@ -20,7 +20,7 @@ const ProductDetails = () => {
         { label: 'Origin', value: 'Madhya Pradesh / Gujarat, India' },
         { label: 'Size', value: '40mm, 45mm, 50mm, 55mm+' },
         { label: 'Packing', value: '5kg, 10kg, 20kg or as per preference' },
-        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
+        { label: 'Minimum Order Quantity', value: 'As per commitment' }
       ]
     },
     "2": {
@@ -37,7 +37,7 @@ const ProductDetails = () => {
         { label: 'Oil Content', value: '18% - 19% Min' },
         { label: 'Moisture', value: '10% Max' },
         { label: 'Packing', value: 'Bulk or as per preference' },
-        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
+        { label: 'Minimum Order Quantity', value: 'As per commitment' }
       ]
     },
     "3": {
@@ -56,7 +56,7 @@ const ProductDetails = () => {
         { label: 'Origin', value: 'Madhya Pradesh, India' },
         { label: 'Cleaning', value: 'Machine Cleaned / Sortex' },
         { label: 'Packing', value: '25kg / 50kg or as per preference' },
-        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' },
+        { label: 'Minimum Order Quantity', value: 'As per commitment' },
         { label: 'Shelf Life', value: '24 Months' }
       ]
     },
@@ -73,7 +73,7 @@ const ProductDetails = () => {
         { label: 'SHU (Heat)', value: '15,000 - 90,000 (Based on variety)' },
         { label: 'Color Value', value: '60 - 150 ASTA' },
         { label: 'Packing', value: '10kg / 25kg or as per preference' },
-        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
+        { label: 'Minimum Order Quantity', value: 'As per commitment' }
       ]
     },
     "5": {
@@ -89,7 +89,7 @@ const ProductDetails = () => {
         { label: 'Density', value: '500 - 600 g/l' },
         { label: 'Moisture', value: '12% Max' },
         { label: 'Packing', value: '25kg / 50kg or as per preference' },
-        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
+        { label: 'Minimum Order Quantity', value: 'As per commitment' }
       ]
     },
     "6": {
@@ -105,7 +105,7 @@ const ProductDetails = () => {
         { label: 'Size', value: '7mm, 8mm, 9mm' },
         { label: 'Moisture', value: '12% Max' },
         { label: 'Packing', value: '25kg / 50kg or as per preference' },
-        { label: 'MOQ', value: 'Minimum Order Quantity as per commitment' }
+        { label: 'Minimum Order Quantity', value: 'As per commitment' }
       ]
     }
   };
@@ -199,9 +199,12 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            <button className="w-full mt-10 bg-blue-600 text-white py-4 rounded-xl font-bold shadow-lg hover:shadow-blue-200 hover:bg-blue-700 transition-all">
+            <Link 
+              to={`/contact?product=${encodeURIComponent(product.name)}`}
+              className="w-full mt-10 bg-blue-600 text-white py-4 rounded-xl font-bold shadow-lg hover:shadow-blue-200 hover:bg-blue-700 transition-all text-center block"
+            >
               Inquire for more details
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

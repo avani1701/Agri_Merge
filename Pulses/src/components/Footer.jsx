@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -24,17 +24,23 @@ const Footer = () => {
               Connecting Indian Produce with Global Demand through trust and excellence. Sourcing the finest agricultural products for the world.
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <FaInstagram className="w-4 h-4" />
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 bg-blue-50 dark:bg-slate-800 rounded-full text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition-all shadow-sm border border-blue-100 dark:border-slate-700"
+                title="Follow us on Twitter"
+              >
+                <FaTwitter className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <FaYoutube className="w-4 h-4" />
-              </a>
-              <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <FaFacebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="p-2 bg-gray-50 dark:bg-slate-800 rounded-full hover:bg-blue-600 hover:text-white transition-all">
-                <FaLinkedin className="w-4 h-4" />
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 bg-blue-50 dark:bg-slate-800 rounded-full text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-all shadow-sm border border-blue-100 dark:border-slate-700"
+                title="Connect on LinkedIn"
+              >
+                <FaLinkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
