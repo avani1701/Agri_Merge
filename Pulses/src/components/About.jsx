@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const About = () => {
+const About = ({ showPulses = true }) => {
   const stats = [
     { icon: '/shield_icon.png', title: 'Trusted Suppliers', desc: 'Source directly from farmers and specified suppliers' },
     { icon: '/packaging_icon.png', title: 'Global Shipping', desc: 'Ensuring secure and timely deliveries worldwide' },
@@ -62,39 +62,41 @@ const About = () => {
         </div>
 
         {/* New Pulses Product Showcase Section */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center pt-16 border-t border-gray-200">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="lg:w-1/2 order-2 lg:order-1"
-          >
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3] group">
-              <img 
-                src="/pulses_about.jpeg" 
-                alt="Premium Indian Pulses" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </div>
-          </motion.div>
+        {showPulses && (
+          <div className="flex flex-col lg:flex-row gap-16 items-center pt-16 border-t border-gray-200">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 order-2 lg:order-1"
+            >
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3] group">
+                <img 
+                  src="/pulses_about.jpeg" 
+                  alt="Premium Indian Pulses" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="lg:w-1/2 order-1 lg:order-2"
-          >
-            <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-              India stands as a trusted global exporter of premium nutrition-rich Pulses. Grown in the highly fertile regions of Central & North India, our Pulses are cultivated using purely natural, chemical-free methods to preserve their high protein density and clean nutrient profile.
-            </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              At Agri Merge Internationals, we ensure our Pulses (Moong - Green Gram, Toor - Pigeon Peas, Urad - Black Gram, Chana - Chickpeas) are thoroughly cleaned, double-graded, and sortex-sorted to reach supreme purity and perfect moisture content. We cater directly to global food manufacturers, retail packers, and wholesale distributors demanding the highest quality standards.
-            </p>
-          </motion.div>
-        </div>
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 order-1 lg:order-2"
+            >
+              <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                India stands as a trusted global exporter of premium nutrition-rich Pulses. Grown in the highly fertile regions of Central & North India, our Pulses are cultivated using purely natural, chemical-free methods to preserve their high protein density and clean nutrient profile.
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                At Agri Merge Internationals, we ensure our Pulses (Moong - Green Gram, Toor - Pigeon Peas, Urad - Black Gram, Chana - Chickpeas) are thoroughly cleaned, double-graded, and sortex-sorted to reach supreme purity and perfect moisture content. We cater directly to global food manufacturers, retail packers, and wholesale distributors demanding the highest quality standards.
+              </p>
+            </motion.div>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
-import { FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -25,13 +26,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3">
               <a 
-                href="#" 
+                href="https://x.com/JaatRishab60720" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="p-3 bg-blue-50 dark:bg-slate-800 rounded-full text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition-all shadow-sm border border-blue-100 dark:border-slate-700"
-                title="Follow us on Twitter"
+                className="p-3 bg-blue-50 dark:bg-slate-800 rounded-full text-gray-900 dark:text-white hover:bg-black hover:text-white transition-all shadow-sm border border-blue-100 dark:border-slate-700"
+                title="Follow us on X (Twitter)"
               >
-                <FaTwitter className="w-5 h-5" />
+                <FaXTwitter className="w-5 h-5" />
               </a>
               <a 
                 href="https://www.linkedin.com/in/rishabh-jaat-80aab6238?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
