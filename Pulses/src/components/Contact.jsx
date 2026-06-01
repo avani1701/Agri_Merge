@@ -96,7 +96,8 @@ const Contact = () => {
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
-            <form className="relative overflow-hidden p-10 rounded-3xl shadow-2xl space-y-6 border border-slate-700/50 bg-slate-900 text-white">
+            <form action="https://api.web3forms.com/submit" method="POST" className="relative overflow-hidden p-10 rounded-3xl shadow-2xl space-y-6 border border-slate-700/50 bg-slate-900 text-white">
+              <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} />
               <div className="text-center mb-6 relative z-10">
                 <div className="flex justify-center mb-4">
                   <img src="/logo_main.png" alt="Agri Merge" className="h-20 w-auto object-contain" />
@@ -119,7 +120,9 @@ const Contact = () => {
                 <div>
                   <label className="block text-slate-300 text-sm font-bold mb-2">Name</label>
                   <input 
+                    name="name"
                     type="text" 
+                    required
                     className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="Your Name"
                   />
@@ -127,7 +130,9 @@ const Contact = () => {
                 <div>
                   <label className="block text-slate-300 text-sm font-bold mb-2">Email</label>
                   <input 
+                    name="email"
                     type="email" 
+                    required
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="Email"
                   />
@@ -135,7 +140,9 @@ const Contact = () => {
                 <div>
                   <label className="block text-slate-300 text-sm font-bold mb-2">Destination Country</label>
                   <select 
+                    name="country"
                     defaultValue=""
+                    required
                     className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-light transition-all cursor-pointer"
                   >
                     <option value="" disabled className="bg-slate-800 text-white">Select Country</option>
@@ -338,8 +345,10 @@ const Contact = () => {
                 <div>
                   <label className="block text-slate-300 text-sm font-bold mb-2">Product of Interest</label>
                   <select 
+                    name="product"
                     value={selectedProduct}
                     onChange={(e) => setSelectedProduct(e.target.value)}
+                    required
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer"
                   >
                     <option value="" disabled className="bg-slate-800 text-white">Select Product</option>
@@ -359,7 +368,9 @@ const Contact = () => {
                 >
                   <label className="block text-slate-300 text-sm font-bold mb-2">Specify Commodity</label>
                   <input 
+                    name="other_commodity"
                     type="text" 
+                    required
                     className="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="Specify the agricultural commodity you are looking for..."
                   />
@@ -369,13 +380,15 @@ const Contact = () => {
               <div className="relative z-10">
                 <label className="block text-slate-300 text-sm font-bold mb-2">Message</label>
                 <textarea 
+                  name="message"
                   rows="4"
+                  required
                   className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                   placeholder="Tell us about your requirements..."
                 ></textarea>
               </div>
 
-              <button className="relative z-10 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl flex items-center justify-center transition-all group shadow-lg shadow-blue-900/40">
+              <button type="submit" className="relative z-10 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl flex items-center justify-center transition-all group shadow-lg shadow-blue-900/40">
                 Send Message
                 <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>

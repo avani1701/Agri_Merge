@@ -42,9 +42,9 @@ const AboutPage = () => {
               className="rounded-3xl overflow-hidden shadow-2xl bg-gray-100 h-[380px] w-full"
             >
               <img
-                src="/soyabean_v2.png"
+                src="/garlic-about.jpg"
                 alt="Premium Indian Garlic Packaging"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
               />
             </motion.div>
           </div>
