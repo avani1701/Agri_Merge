@@ -34,7 +34,7 @@ const Footer = () => {
                 <FaTwitter className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/rishabh-jaat-80aab6238?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-3 bg-blue-50 dark:bg-slate-800 rounded-full text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-all shadow-sm border border-blue-100 dark:border-slate-700"
