@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Scene3D from './Scene3D';
-import heroVideo1 from '../assets/video/f_a_ed_e_c_f_f_e_mp_.mp4';
-import heroVideo2 from '../assets/video/pXvD_Wmp_.mp4';
-import heroVideo3 from '../assets/video/f_d_c_e_b_cb_mp_.mp4';
 
 const Hero = () => {
-  const videos = [heroVideo1, heroVideo2, heroVideo3];
+  const videos = [
+    '/assets/video/f_a_ed_e_c_f_f_e_mp_.mp4',
+    '/assets/video/pXvD_Wmp_.mp4',
+    '/assets/video/f_d_c_e_b_cb_mp_.mp4'
+  ];
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRefs = useRef([]);
 
