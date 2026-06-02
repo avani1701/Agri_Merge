@@ -22,6 +22,7 @@ const ScrollToTop = () => {
   return null;
 };
 
+
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
