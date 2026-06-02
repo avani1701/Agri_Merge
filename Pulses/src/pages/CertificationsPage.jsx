@@ -153,12 +153,21 @@ const CertificationsPage = () => {
               from APEDA and phytosanitary certificates to customs documentation, ensuring a smooth path for your cargo. Download our official corporate brochure to explore our complete export catalog and grading standards.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-900/30">
+              <a 
+                href="/broshure/broshure.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-900/30 text-center"
+              >
                 View Brochure
-              </button>
-              <button className="bg-white dark:bg-slate-800 border-2 border-gray-100 dark:border-slate-700 text-gray-700 dark:text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-slate-700 transition-all">
+              </a>
+              <a 
+                href="/broshure/broshure.pdf" 
+                download 
+                className="bg-white dark:bg-slate-800 border-2 border-gray-100 dark:border-slate-700 text-gray-700 dark:text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-slate-700 transition-all text-center"
+              >
                 Download Brochure
-              </button>
+              </a>
             </div>
           </div>
         </div>
