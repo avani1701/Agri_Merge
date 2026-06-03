@@ -57,7 +57,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email Us</p>
-                  <p className="text-xl font-medium">info@agrimerge.in</p>
+                  <div className="space-y-1">
+
+                    <p className="text-lg font-medium text-blue-300">info@agrimergeinternationals.com</p>
+                    <p className="text-lg font-medium text-blue-300">contact@agrimergeinternationals.com</p>
+                  </div>
                 </div>
               </motion.div>
               
@@ -118,13 +122,13 @@ const Contact = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
                 <div>
-                  <label className="block text-slate-300 text-sm font-bold mb-2">Name</label>
+                  <label className="block text-slate-300 text-sm font-bold mb-2">Company Name</label>
                   <input 
-                    name="name"
+                    name="company_name"
                     type="text" 
                     required
                     className="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-                    placeholder="Your Name"
+                    placeholder="Company Name"
                   />
                 </div>
                 <div>

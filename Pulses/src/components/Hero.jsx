@@ -6,9 +6,9 @@ import Scene3D from './Scene3D';
 
 const Hero = () => {
   const videos = [
-    '/assets/video/f_a_ed_e_c_f_f_e_mp_.mp4',
-    '/assets/video/pXvD_Wmp_.mp4',
-    '/assets/video/f_d_c_e_b_cb_mp_.mp4'
+    'https://res.cloudinary.com/dt9ff5lvq/video/upload/f_auto,q_auto/v1780503263/agri-merge/c3hpgilg8cmxa1d1a27r.mp4',
+    'https://res.cloudinary.com/dt9ff5lvq/video/upload/f_auto,q_auto/v1780503304/agri-merge/vaqythbnel5y5sqe9evf.mp4',
+    'https://res.cloudinary.com/dt9ff5lvq/video/upload/f_auto,q_auto/v1780503352/agri-merge/dy7hqu8uxde2cddwr01m.mp4'
   ];
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRefs = useRef([]);
@@ -98,6 +98,7 @@ const Hero = () => {
             src={video}
             muted
             playsInline
+            autoPlay={index === 0}
             preload="auto"
             onEnded={handleVideoEnded}
             onTimeUpdate={() => handleTimeUpdate(index)}

@@ -73,9 +73,12 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-blue-900 dark:text-white mb-4">Contact Us</h4>
             <ul className="space-y-3 text-sm text-gray-500 dark:text-gray-400">
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-600" />
-                <span>info@agrimerge.in</span>
+              <li className="flex items-start gap-2">
+                <Mail className="w-4 h-4 text-blue-600 mt-1" />
+                <div className="flex flex-col gap-1">
+                  <span>info@agrimergeinternationals.com</span>
+                  <span>contact@agrimergeinternationals.com</span>
+                </div>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-blue-600" />
