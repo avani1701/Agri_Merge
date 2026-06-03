@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, ShieldCheck, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Scene3D from './Scene3D';
 
@@ -11,6 +11,7 @@ const Hero = () => {
     'https://res.cloudinary.com/dt9ff5lvq/video/upload/f_auto,q_auto/v1780503352/agri-merge/dy7hqu8uxde2cddwr01m.mp4'
   ];
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
   const videoRefs = useRef([]);
 
   // Initialize refs array
@@ -68,6 +69,10 @@ const Hero = () => {
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
   };
 
+  const handleFirstVideoCanPlay = () => {
+    setIsVideoLoading(false);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -91,6 +96,22 @@ const Hero = () => {
 
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
+        <AnimatePresence>
+          {isVideoLoading && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-slate-950"
+            >
+              <Loader2 className="w-12 h-12 text-blue-500 animate-spin mb-4" />
+              <p className="text-blue-200 font-medium tracking-widest text-xs uppercase animate-pulse">
+                Preparing High Quality Experience...
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {videos.map((video, index) => (
           <video
             key={index}
@@ -100,6 +121,7 @@ const Hero = () => {
             playsInline
             autoPlay={index === 0}
             preload="auto"
+            onCanPlayThrough={index === 0 ? handleFirstVideoCanPlay : undefined}
             onEnded={handleVideoEnded}
             onTimeUpdate={() => handleTimeUpdate(index)}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
