@@ -90,7 +90,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-start pt-48 md:items-center md:pt-0 overflow-hidden bg-slate-950">
+    <section className="relative min-h-screen flex items-center pt-32 pb-20 md:pt-0 md:pb-0 overflow-hidden bg-slate-950">
       {/* 3D Background */}
       <Scene3D />
 
@@ -149,7 +149,7 @@ const Hero = () => {
           </motion.span>
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl md:text-7xl font-bold mb-6 leading-tight"
           >
             From Indian Origins to <span className="text-blue-400">Global Markets</span>
           </motion.h1>
@@ -181,20 +181,15 @@ const Hero = () => {
           {/* New Mobile Stats/Trust Row */}
           <motion.div 
             variants={itemVariants}
-            className="mt-12 md:hidden flex items-center justify-between px-2 pt-10 border-t border-white/10"
+            className="mt-8 md:hidden flex items-center justify-around px-2 pt-8 border-t border-white/10"
           >
             <div className="text-center">
-              <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">15+</p>
+              <p className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">15+</p>
               <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Countries</p>
             </div>
             <div className="w-px h-8 bg-white/10"></div>
             <div className="text-center">
-              <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">ISO</p>
-              <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Certified</p>
-            </div>
-            <div className="w-px h-8 bg-white/10"></div>
-            <div className="text-center">
-              <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">24/7</p>
+              <p className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">24/7</p>
               <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Support</p>
             </div>
           </motion.div>
