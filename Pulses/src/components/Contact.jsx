@@ -58,9 +58,8 @@ const Contact = () => {
                 <div>
                   <p className="text-gray-400 text-sm">Email Us</p>
                   <div className="space-y-1">
-
-                    <p className="text-lg font-medium text-blue-300">info@agrimergeinternationals.com</p>
-                    <p className="text-lg font-medium text-blue-300">contact@agrimergeinternationals.com</p>
+                    <a href="mailto:info@agrimergeinternationals.com" className="text-lg font-medium text-blue-300 hover:text-blue-200 hover:underline transition-colors block">info@agrimergeinternationals.com</a>
+                    <a href="mailto:contact@agrimergeinternationals.com" className="text-lg font-medium text-blue-300 hover:text-blue-200 hover:underline transition-colors block">contact@agrimergeinternationals.com</a>
                   </div>
                 </div>
               </motion.div>
@@ -74,7 +73,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Call Us</p>
-                  <p className="text-xl font-medium">+91 70005 68721</p>
+                  <a href="tel:+917000568721" className="text-xl font-medium hover:text-blue-300 hover:underline transition-colors">+91 70005 68721</a>
                 </div>
               </motion.div>
               
