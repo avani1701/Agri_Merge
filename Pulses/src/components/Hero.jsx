@@ -43,7 +43,7 @@ const Hero = () => {
           ref.pause();
         }
       });
-    }, 1200); 
+    }, 1200);
 
     return () => clearTimeout(fadeTimeout);
   }, [currentVideoIndex]);
@@ -57,7 +57,7 @@ const Hero = () => {
         const nextVideo = videoRefs.current[nextIndex];
         if (nextVideo && nextVideo.paused) {
           nextVideo.currentTime = 0;
-          nextVideo.play().catch(e => {});
+          nextVideo.play().catch(e => { });
           // We can't trigger state change here easily without loop, 
           // let onEnded do the final visibility switch
         }
@@ -98,7 +98,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <AnimatePresence>
           {isVideoLoading && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -124,9 +124,8 @@ const Hero = () => {
             onCanPlayThrough={index === 0 ? handleFirstVideoCanPlay : undefined}
             onEnded={handleVideoEnded}
             onTimeUpdate={() => handleTimeUpdate(index)}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              index === currentVideoIndex ? 'opacity-40' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentVideoIndex ? 'opacity-40' : 'opacity-0'
+              }`}
           />
         ))}
       </div>
@@ -135,42 +134,42 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80 z-10"></div>
 
       <div className="container mx-auto px-6 relative z-20 text-white">
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="max-w-3xl"
         >
-          <motion.span 
+          <motion.span
             variants={itemVariants}
             className="inline-block px-4 py-1 rounded-full bg-blue-600/30 border border-blue-400/50 text-blue-300 text-sm font-semibold mb-6"
           >
             Garlic • Soyabean • Pulses • Spices
           </motion.span>
-          <motion.h1 
+          <motion.h1
             variants={itemVariants}
             className="text-3xl md:text-7xl font-bold mb-6 leading-tight"
           >
             From Indian Origins to <span className="text-blue-400">Global Markets</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-xl text-gray-200 mb-12 max-w-2xl"
           >
             At Agri Merge Internationals, we deliver premium Indian products worldwide with Reliability, Transparency, and Trust.
           </motion.p>
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
           >
-            <Link 
+            <Link
               to="/products"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center transition-all group"
             >
               Explore Products
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
+            <Link
               to="/about"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-center transition-all"
             >
@@ -179,7 +178,7 @@ const Hero = () => {
           </motion.div>
 
           {/* New Mobile Stats/Trust Row */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="mt-8 md:hidden flex items-center justify-around px-2 pt-8 border-t border-white/10"
           >
@@ -198,7 +197,7 @@ const Hero = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-10 right-10 z-20 hidden md:block">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
