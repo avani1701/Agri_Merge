@@ -19,43 +19,47 @@ const CertificationsPage = () => {
       title: "Import Export Code (IEC)",
       provider: "DGFT",
       desc: "Official Import Export Code issued by the Directorate General of Foreign Trade.",
-      icon: '/globe_icon.png'
+      icon: '/globe_icon.png',
+      link: '/certificates/Agri Merge Internationals_IEC(1).pdf',
+      pdfPreview: '/certificates/Agri Merge Internationals_IEC(1).pdf'
     },
     {
       id: "gst",
       title: "GST Certification",
       provider: "Government of India",
       desc: "Goods and Services Tax registration for compliant domestic and international trade.",
-      icon: '/document_icon.png'
+      icon: '/document_icon.png',
+      link: '/certificates/Agri Merge Internationals_GST.pdf',
+      pdfPreview: '/certificates/Agri Merge Internationals_GST.pdf'
+    },
+    {
+      id: "msme",
+      title: "MSME Certification",
+      provider: "Ministry of MSME",
+      desc: "Udyam registration certifying official recognition as a Micro, Small, and Medium Enterprise.",
+      icon: '/document_icon.png',
+      link: '/certificates/AGRI MERGE INTERNATIONALS_ MSME CERTIFICATE.pdf',
+      pdfPreview: '/certificates/AGRI MERGE INTERNATIONALS_ MSME CERTIFICATE.pdf'
     },
     {
       id: "fssai",
       title: "FSSAI Certification",
       provider: "Food Safety & Standards Authority of India",
       desc: "Central licensing ensuring complete compliance with food safety and nutritional standards for global markets.",
-      icon: '/shield_icon.png'
+      icon: '/shield_icon.png',
+      link: '/certificates/FSSAI.pdf',
+      pdfPreview: '/certificates/FSSAI.pdf'
     },
     {
       id: "apeda",
       title: "APEDA Certification",
       provider: "Ministry of Commerce, Govt. of India",
       desc: "Registration with the Agricultural and Processed Food Products Export Development Authority for premium Indian agricultural exports.",
-      icon: '/award_icon.png'
+      icon: '/award_icon.png',
+      link: '/certificates/APEDA.pdf',
+      pdfPreview: '/certificates/APEDA.pdf'
     },
-    {
-      id: "spice",
-      title: "SPICES BOARD Certification",
-      provider: "Spices Board India",
-      desc: "Official registration for the export of premium Indian spices.",
-      icon: '/checkmark_icon.png'
-    },
-    {
-      id: "coi",
-      title: "Certificate Of Origin COI",
-      provider: "Chamber of Commerce / Ministry of Agriculture",
-      desc: "Legal export documentation validating the Indian origin and quality standards of our shipments.",
-      icon: '/document_icon.png'
-    }
+
   ];
 
   const qualitySteps = [
@@ -97,16 +101,32 @@ const CertificationsPage = () => {
                 transition={{ delay: idx * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all group"
+                className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-teal-500/30 dark:hover:border-teal-500/30 transition-all group flex flex-col"
               >
-                <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform">
-                  <img src={cert.icon} alt={cert.title} className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal dark:invert" />
-                </div>
+                {cert.pdfPreview ? (
+                  <div className="mb-6 w-full h-48 rounded-lg overflow-hidden border border-gray-100 dark:border-slate-700 bg-white">
+                    <iframe 
+                      src={`${cert.pdfPreview}#page=1&view=FitH&toolbar=0&navpanes=0`}
+                      title={`${cert.title} Preview`}
+                      className="w-full h-full"
+                      style={{ border: 'none' }}
+                    />
+                  </div>
+                ) : (
+                  <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform">
+                    <img src={cert.icon} alt={cert.title} className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal dark:invert" />
+                  </div>
+                )}
                 <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{cert.title}</h3>
-                <p className="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">{cert.provider}</p>
-                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                <p className="text-teal-600 dark:text-teal-400 text-xs font-bold uppercase tracking-wider mb-4">{cert.provider}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-grow">
                   {cert.desc}
                 </p>
+                {cert.link && (
+                  <a href={cert.link} target="_blank" rel="noopener noreferrer" className="mt-6 flex items-center text-teal-600 dark:text-teal-400 font-semibold text-sm hover:underline w-fit">
+                    View Certificate <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
