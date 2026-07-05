@@ -11,6 +11,14 @@ import {
   ArrowRight
 } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
 
 const CertificationsPage = () => {
   const certifications = [
@@ -104,13 +112,15 @@ const CertificationsPage = () => {
                 className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-teal-500/30 dark:hover:border-teal-500/30 transition-all group flex flex-col"
               >
                 {cert.pdfPreview ? (
-                  <div className="mb-6 w-full h-48 rounded-lg overflow-hidden border border-gray-100 dark:border-slate-700 bg-white">
-                    <iframe 
-                      src={`${cert.pdfPreview}#page=1&view=FitH&toolbar=0&navpanes=0`}
-                      title={`${cert.title} Preview`}
-                      className="w-full h-full"
-                      style={{ border: 'none' }}
-                    />
+                  <div className="mb-6 w-full h-48 rounded-lg overflow-y-auto overflow-x-hidden border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 flex justify-center p-2">
+                    <Document file={cert.pdfPreview} className="flex justify-center w-full">
+                      <Page 
+                        pageNumber={1} 
+                        width={280}
+                        renderTextLayer={false} 
+                        renderAnnotationLayer={false} 
+                      />
+                    </Document>
                   </div>
                 ) : (
                   <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform">
