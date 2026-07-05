@@ -2,6 +2,7 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+
 const WhatsAppWidget = () => {
   const phoneNumber = "917000568721"; // Using the number provided by user
   const message = "Hello! I am interested in sourcing agri commodities from Agri Merge Internationals.";
