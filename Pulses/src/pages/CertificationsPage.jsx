@@ -112,8 +112,8 @@ const CertificationsPage = () => {
                 className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-teal-500/30 dark:hover:border-teal-500/30 transition-all group flex flex-col"
               >
                 {cert.pdfPreview ? (
-                  <div className="mb-6 w-full h-48 rounded-lg overflow-y-auto overflow-x-hidden border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 flex justify-center p-2">
-                    <Document file={cert.pdfPreview} className="flex justify-center w-full">
+                  <div className="mb-6 w-full h-48 rounded-lg overflow-y-auto overflow-x-hidden border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 p-2">
+                    <Document file={cert.pdfPreview} className="flex justify-center w-full pointer-events-none">
                       <Page 
                         pageNumber={1} 
                         width={280}
