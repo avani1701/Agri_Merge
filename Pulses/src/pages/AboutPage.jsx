@@ -55,7 +55,7 @@ const AboutPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="rounded-3xl overflow-hidden shadow-2xl md:order-1 order-2 h-[380px] w-full bg-gray-100"
+              className="rounded-3xl overflow-hidden shadow-2xl md:order-1 order-2 h-[380px] w-full bg-gray-100 dark:bg-slate-800"
             >
               <img
                 src="/pulses_v2.png"
@@ -77,6 +77,97 @@ const AboutPage = () => {
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 At Agri Merge Internationals, we ensure our Soyabeans are thoroughly cleaned, double-graded, and sorted to reach supreme purity and perfect moisture content. We cater directly to global culinary producers, food manufacturing units, and oil processors demanding the highest quality standards.
               </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Golden Wheat (Sharbati)</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                Our Golden Sharbati Wheat is sourced directly from the famous wheat-producing belts of Madhya Pradesh. Celebrated worldwide for its golden luster, high gluten content, and exceptional baking qualities.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                We utilize double-sortex cleaning and moisture-controlled processing before packing into durable, multi-wall jute and PP export bags to ensure absolute freshness and zero infestation during international transport.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="rounded-3xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-slate-800 h-[380px] w-full"
+            >
+              <img
+                src="/wheat_packaging.jpg"
+                alt="Wheat Packaging"
+                className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+              />
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="rounded-3xl overflow-hidden shadow-2xl md:order-1 order-2 h-[380px] w-full bg-gray-100 dark:bg-slate-800"
+            >
+              <img
+                src="/chickpeas_packaging.jpg"
+                alt="Chickpeas (Kabuli Chana) Packaging"
+                className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="md:order-2 order-1"
+            >
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Chickpeas (Kabuli Chana)</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                Agri Merge Internationals exports premium Kabuli Chana white chickpeas in a full range of counts — 50-52, 58-60, 75-80 and more. Sourced from prime Indian agricultural zones, our chickpeas are prized for their uniform size, bright cream color, and fast cooking time.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Packaged in food-grade, moisture-sealed export sacks (25kg/50kg), our chickpeas meet strict international food safety standards for wholesale importers, canning facilities, and food processors globally.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold mb-6 dark:text-white">Basmati Rice</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                Our Basmati Rice is cultivated in the Indo-Gangetic plains at the foothills of the Himalayas, where the soil and climate give the grain its signature aroma, fluffy texture, and remarkable elongation on cooking. We supply leading varieties including 1121, 1509, Pusa and Traditional Basmati.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Every consignment is naturally aged, colour-sorted and sortex cleaned before packing in Raw, Steamed, Sella or Golden Sella form. Custom retail packs and bulk export bags are available to suit importers, HORECA buyers, and private-label brands worldwide.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="rounded-3xl overflow-hidden shadow-2xl bg-gray-100 dark:bg-slate-800 h-[380px] w-full"
+            >
+              <img
+                src="/rice_packaging.jpg"
+                alt="Basmati Rice Packaging"
+                className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+              />
             </motion.div>
           </div>
         </div>

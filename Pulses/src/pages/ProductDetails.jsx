@@ -93,18 +93,54 @@ const ProductDetails = () => {
       ]
     },
     "6": {
-      name: 'Chickpeas',
+      name: 'Chickpeas (Kabuli Chana)',
       category: 'Lentils',
-      image: 'https://images.unsplash.com/photo-1585996853874-9f798f48003a?q=80&w=2070&auto=format&fit=crop',
-      desc: 'Premium quality chickpeas, sourced from the best farms, ideal for global markets.',
-      features: ['Premium large-caliber seeds (up to 9mm)', 'Excellent plant-based protein source', 'Optimal texture ensuring fast and even cooking', 'Sortex-polished for uniform light color and visual appeal'],
+      image: '/chickpeas.jpg',
+      desc: 'Premium grade Kabuli Chana white chickpeas sourced from Madhya Pradesh, India. Renowned for large count caliber, delicious flavor, and uniform texture.',
+      features: ['Available in multiple counts — 50-52, 58-60, 75-80 and more', '100% Sortex cleaned and machine polished', 'Rich source of plant-based protein and fiber', 'Multi-layer moisture-proof export packaging'],
       specs: [
-        { label: 'Global Name', value: 'Chickpeas' },
+        { label: 'Global Name', value: 'Chickpeas / Garbanzo Beans' },
         { label: 'Domestic Name', value: 'Kabuli Chana' },
         { label: 'Origin', value: 'Madhya Pradesh, India' },
-        { label: 'Size', value: '7mm, 8mm, 9mm' },
-        { label: 'Moisture', value: '12% Max' },
-        { label: 'Packing', value: '25kg / 50kg or as per preference' },
+        { label: 'Count / Caliber', value: '50-52, 58-60, 75-80 Count and more' },
+        { label: 'Moisture', value: '10% Max' },
+        { label: 'Packing', value: '25kg / 50kg Jute/PP Bags or as per preference' },
+        { label: 'Minimum Order Quantity', value: 'As per commitment' }
+      ]
+    },
+    "7": {
+      name: 'Golden Wheat (Sharbati)',
+      category: 'Seeds & Grains',
+      image: '/wheat.jpg',
+      desc: 'Top-tier Sharbati golden wheat grains grown in the fertile soils of Madhya Pradesh. Exceptionally rich in gluten, protein, and natural sweetness.',
+      features: ['100% Pure Sharbati wheat grains', 'High protein and gluten content ideal for milling', 'Machine cleaned & double sortex sorted for zero impurities', 'Customized bulk export packing ensuring zero moisture'],
+      specs: [
+        { label: 'Global Name', value: 'Golden Wheat Grains' },
+        { label: 'Domestic Name', value: 'Sharbati Wheat' },
+        { label: 'Origin', value: 'Madhya Pradesh, India' },
+        { label: 'Protein Content', value: '12% - 14% Min' },
+        { label: 'Moisture', value: '10% Max' },
+        { label: 'Foreign Matter', value: '0.5% Max' },
+        { label: 'Packing', value: '25kg / 50kg PP/Jute Bags or as per preference' },
+        { label: 'Minimum Order Quantity', value: 'As per commitment' }
+      ]
+    },
+    "8": {
+      name: 'Basmati Rice',
+      category: 'Seeds & Grains',
+      image: '/rice.jpg',
+      desc: 'Naturally aged long-grain Basmati rice from the Himalayan foothills, prized worldwide for its distinctive aroma, silky texture, and exceptional grain elongation on cooking.',
+      features: ['Extra-long slender grains with superior elongation', 'Naturally aged 12-24 months for enhanced aroma', 'Sortex cleaned with zero broken and foreign matter', 'Available in Raw, Steamed, Sella and Golden Sella'],
+      specs: [
+        { label: 'Global Name', value: 'Basmati Rice' },
+        { label: 'Domestic Name', value: 'Basmati Chawal' },
+        { label: 'Origin', value: 'Punjab / Haryana / Uttar Pradesh, India' },
+        { label: 'Variety', value: '1121, 1509, Pusa, Traditional Basmati' },
+        { label: 'Average Grain Length', value: '7.5mm - 8.35mm' },
+        { label: 'Processing', value: 'Raw / Steamed / Sella / Golden Sella' },
+        { label: 'Broken', value: '1% - 2% Max' },
+        { label: 'Moisture', value: '12% - 13% Max' },
+        { label: 'Packing', value: '5kg / 25kg / 50kg PP/Jute Bags or as per preference' },
         { label: 'Minimum Order Quantity', value: 'As per commitment' }
       ]
     }
@@ -122,7 +158,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="pt-24 bg-white min-h-screen">
+    <div className="pt-24 md:pt-32 bg-white min-h-screen">
       <div className="container mx-auto px-6">
         <Link to="/products" className="flex items-center text-gray-500 hover:text-blue-600 mb-8 transition-colors group">
           <ArrowLeft className="mr-2 w-4 h-4 group-hover:-translate-x-1 transition-transform" />
@@ -136,7 +172,7 @@ const ProductDetails = () => {
             animate={{ opacity: 1, x: 0 }}
             className="lg:w-1/2"
           >
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
+            <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl relative bg-gray-50">
               <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
               <div className="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-xl text-blue-900 font-bold text-sm shadow-sm">
                 {product.category}

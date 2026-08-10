@@ -29,6 +29,27 @@ const Products = () => {
       category: 'Lentils',
       image: '/pulses.png',
       desc: 'A wide range of high-grade pulses and lentils, cleaned and sorted for export.'
+    },
+    {
+      id: 6,
+      name: 'Chickpeas (Kabuli Chana)',
+      category: 'Lentils',
+      image: '/chickpeas.jpg',
+      desc: 'Export-grade Kabuli Chana white chickpeas in 50-52, 58-60, 75-80 counts and more.'
+    },
+    {
+      id: 7,
+      name: 'Golden Wheat',
+      category: 'Seeds & Grains',
+      image: '/wheat.jpg',
+      desc: 'Premium golden Indian wheat grains (Sharbati), rich in gluten and protein.'
+    },
+    {
+      id: 8,
+      name: 'Basmati Rice',
+      category: 'Seeds & Grains',
+      image: '/rice.jpg',
+      desc: 'Long-grain aromatic Basmati rice, aged for superior elongation and fragrance.'
     }
   ];
 
@@ -97,12 +118,13 @@ const Products = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
+          key={activeCategory}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredProducts.map((product) => (
             <motion.div 
