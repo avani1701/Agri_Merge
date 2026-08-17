@@ -21,7 +21,7 @@ const ProductsPage = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold mb-8 dark:text-white"
+            className="text-3xl font-bold mb-8 text-gray-900 dark:text-white"
           >
             Quality Standards
           </motion.h2>
@@ -55,7 +55,7 @@ const ProductsPage = () => {
                     className={`w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal ${item.icon.includes('3d') ? '' : 'dark:invert'}`} 
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-4 dark:text-white">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{item.title}</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm">{item.desc}</p>
               </motion.div>
             ))}

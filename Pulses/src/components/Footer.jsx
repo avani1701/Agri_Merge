@@ -62,10 +62,9 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-blue-900 dark:text-white mb-4">Products</h4>
             <ul className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-              <li><Link to="/products" className="hover:text-blue-600">Agri Commodities</Link></li>
-              <li><Link to="/products" className="hover:text-blue-600">Spices</Link></li>
-              <li><Link to="/products" className="hover:text-blue-600">Lentils & Pulses</Link></li>
-              <li><Link to="/products" className="hover:text-blue-600">Grains</Link></li>
+              <li><Link to="/products" state={{ category: 'Agri Commodities' }} className="hover:text-blue-600">Agri Commodities</Link></li>
+              <li><Link to="/products" state={{ category: 'Lentils' }} className="hover:text-blue-600">Lentils & Pulses</Link></li>
+              <li><Link to="/products" state={{ category: 'Seeds & Grains' }} className="hover:text-blue-600">Grains</Link></li>
             </ul>
           </div>
 
