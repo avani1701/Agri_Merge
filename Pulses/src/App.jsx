@@ -13,12 +13,12 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import WhatsAppWidget from './components/WhatsAppWidget';
 
-// Scroll to top on route change
+// Scroll to top on route change or state change
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, state, search } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, state, search]);
   return null;
 };
 
