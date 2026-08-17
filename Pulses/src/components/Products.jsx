@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Products = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
-
+  const location = useLocation();
   const categories = ['All', 'Agri Commodities', 'Seeds & Grains', 'Lentils'];
+  
+  const initialCategory = location.state?.category && categories.includes(location.state.category) 
+    ? location.state.category 
+    : 'All';
+
+  const [activeCategory, setActiveCategory] = useState(initialCategory);
+
+  useEffect(() => {
+    if (location.state?.category && categories.includes(location.state.category)) {
+      setActiveCategory(location.state.category);
+    } else {
+      setActiveCategory('All');
+    }
+  }, [location.state]);
 
   const products = [
     {
@@ -30,6 +43,7 @@ const Products = () => {
       image: '/pulses.png',
       desc: 'A wide range of high-grade pulses and lentils, cleaned and sorted for export.'
     },
+
     {
       id: 6,
       name: 'Chickpeas (Kabuli Chana)',
@@ -102,12 +116,12 @@ const Products = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
+        <div className="flex overflow-x-auto gap-4 mb-12 pb-2 md:pb-0 md:flex-wrap justify-start md:justify-start [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all ${
+              className={`whitespace-nowrap flex-shrink-0 px-6 py-2 rounded-full font-medium transition-all ${
                 activeCategory === category
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700'
